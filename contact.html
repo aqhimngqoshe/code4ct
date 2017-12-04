@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Contact | Code4CT</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Poppins" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" href="images/logo/code4ct-logo.jpg" type="image/jpg">
+
+    <style>
+    body {
+      overflow-x: hidden;
+    }
+    header {
+      background-color: #999999;
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+      color: #4d4d4d;
+      padding: 50px;
+      text-align: center;
+      width: 100%;
+    }
+    /*NavBar Styling*/
+
+    nav {
+      background-color: white;
+      font-style: normal;
+      width: 100%;
+      height: 50px;
+      width: 100%;
+      margin-left: 450px;
+    }
+
+    nav li {
+        display: inline;
+        list-style-type: none;
+        text-decoration: none;
+        padding: 10px;
+        margin-left: 5px;
+
+    }
+    nav li a{
+      font-style: normal;
+      font-family: 'Lato', sans-serif;
+      font-weight: bold;
+      font-size: 14px;
+      color: #4d4d4d;
+      list-style-type: none;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+    nav li a:hover {
+      color: red;
+    }
+    nav li a:active {
+      color: red;
+    }
+
+    /*End of NavBar Styling*/
+
+    span.breadcrumb li {
+      list-style-type: none;
+      display: inline;
+      text-align: center;
+      font-style: normal;
+      font-family: 'Poppins', sans-serif;
+      display: inline;
+    }
+    span.breadcrumb li a {
+      text-decoration: none;
+      color: #4d4d4d;
+    }
+    span.breadcrumb li a:hover {
+      color: #ff4d4d;
+    }
+
+    /*End of Top Section of Contact Page*/
+    /*Contact Form*/
+    section {
+      float: left;
+      width: 60%;
+      margin-left: 5px;
+    }
+
+    section h2 {
+      font-family: 'Poppins', sans-serif;
+      padding: 20px;
+    }
+
+    input {
+    border: 1px solid lightgrey;
+    width: 250px;
+    height: 40px;
+    border-radius: 3%;
+    }
+
+    input::placeholder {
+    font-family: 'Poppins', sans-serif;
+    color: grey;
+    font-size: 18px;
+    }
+    textarea {
+      border: 1px solid lightgrey;
+      border-radius: 3%;
+    }
+    textarea::placeholder {
+      font-family: 'Poppins', sans-serif;
+      color: grey;
+      font-size: 18px;
+    }
+    button {
+      background-color: #ff4d4d;
+      border: 1px solid #ff4d4d;
+      border-radius: 5%;
+      color: white;
+      font-size: 18px;
+      width: 150px;
+      height: 60px;
+      padding-top: 10px;
+    }
+    /*End of Contact Form*/
+
+    /*Contact Details*/
+    aside {
+      float: left;
+      width: 35%;
+    }
+    aside h2 {
+      font-family: 'Poppins', sans-serif;
+      padding: 20px;
+    }
+
+    hr {
+    width: 40px;
+    height: 2px;
+    font-weight: bold;
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    background-color: #ff4d4d;
+    border: 1px solid #ff4d4d;
+    }
+    ul li {
+    list-style-type: none;
+    font-family: 'Poppins', sans-serif;
+    color: #4d4d4d;
+    text-align: justify;
+    }
+    /*End of Contact Details*/
+    /*Footer Section*/
+    #Map_Container {
+    width: 100%;
+    height: 300px;
+    margin-top: 10px;
+    }
+
+    #contact {
+    list-style-type: none;
+    font-family: 'Poppins', sans-serif;
+    color: #4d4d4d;
+    text-align: justify;
+    }
+    footer {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    background-color: white;
+    }
+
+    footer > div {
+    background-color: white;
+    padding: 10px;
+    }
+
+    footer h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #4d4d4d;
+    margin-left: 20px;
+    }
+
+    footer p {
+    margin-left: 5px;
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+    color: #4d4d4d;
+    }
+
+    footer ul {
+    list-style-type: square;
+    margin-left: 10px;
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+    color: #4d4d4d;
+    }
+
+    footer li a {
+    text-decoration: none;
+    color: #4d4d4d;
+    }
+
+    footer ul li:hover {
+    color: #ff4d4d;
+    }
+
+    footer i {
+    color: #4d4d4d;
+    }
+
+    footer i:hover {
+    color: #ff4d4d;
+    }
+
+    /*Copright footer section*/
+    #footer {
+    width: 100%;
+    height: 50px;
+    background-color: #ff4d4d;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    }
+
+    #footer span {
+    float: left;
+    width: 50%;
+    margin-top: 10px;
+    }
+    #footer ul {
+    float: left;
+    width: 45%;
+    margin-left: 20px;
+    }
+    #footer ul li {
+    display: inline;
+    margin-left: 3px;
+    }
+    #footer li a {
+    font-style: normal;
+    color: white;
+    text-decoration: none;
+    }
+    /*End of Footer Section*/
+
+    @media screen
+      and (device-width: 320px)
+      and (device-height: 640px)
+      and (-webkit-device-pixel-ratio: 2) {
+        body {
+          width: 100%;
+          overflow-x: hidden;
+        }
+        header {
+          background-color: #999999;
+          font-family: 'Poppins', sans-serif;
+          font-weight: bold;
+          color: #4d4d4d;
+          padding: 50px;
+          text-align: center;
+          width: 100%;
+        }
+        /*NavBar Styling*/
+
+        nav {
+          background-color: white;
+          font-style: normal;
+          width: 100%;
+          height: 50px;
+          width: 100%;
+          margin-left: 450px;
+        }
+
+        nav li {
+            display: inline;
+            list-style-type: none;
+            text-decoration: none;
+            padding: 10px;
+            margin-left: 5px;
+
+        }
+        nav li a{
+          font-style: normal;
+          font-family: 'Lato', sans-serif;
+          font-weight: bold;
+          font-size: 14px;
+          color: #4d4d4d;
+          list-style-type: none;
+          text-decoration: none;
+          margin-left: 10px;
+        }
+        nav li a:hover {
+          color: red;
+        }
+        nav li a:active {
+          color: red;
+        }
+
+        /*End of NavBar Styling*/
+
+        span.breadcrumb li {
+          list-style-type: none;
+          display: inline;
+          text-align: center;
+          font-style: normal;
+          font-family: 'Poppins', sans-serif;
+          display: inline;
+        }
+        span.breadcrumb li a {
+          text-decoration: none;
+          color: #4d4d4d;
+        }
+        span.breadcrumb li a:hover {
+          color: #ff4d4d;
+        }
+
+        /*End of Top Section of Contact Page*/
+        /*Contact Form*/
+        section {
+          float: left;
+          width: 60%;
+          margin-left: 5px;
+        }
+
+        section h2 {
+          font-family: 'Poppins', sans-serif;
+          padding: 20px;
+        }
+
+        input {
+        border: 1px solid lightgrey;
+        width: 250px;
+        height: 40px;
+        border-radius: 3%;
+        }
+
+        input::placeholder {
+        font-family: 'Poppins', sans-serif;
+        color: grey;
+        font-size: 18px;
+        }
+        textarea {
+          border: 1px solid lightgrey;
+          border-radius: 3%;
+        }
+        textarea::placeholder {
+          font-family: 'Poppins', sans-serif;
+          color: grey;
+          font-size: 18px;
+        }
+        button {
+          background-color: #ff4d4d;
+          border: 1px solid #ff4d4d;
+          border-radius: 5%;
+          color: white;
+          font-size: 18px;
+          width: 150px;
+          height: 60px;
+          padding-top: 10px;
+        }
+        /*End of Contact Form*/
+
+        /*Contact Details*/
+        aside {
+          float: left;
+          width: 35%;
+        }
+        aside h2 {
+          font-family: 'Poppins', sans-serif;
+          padding: 20px;
+        }
+
+        hr {
+        width: 40px;
+        height: 2px;
+        font-weight: bold;
+        float: left;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        background-color: #ff4d4d;
+        border: 1px solid #ff4d4d;
+        }
+        ul li {
+        list-style-type: none;
+        font-family: 'Poppins', sans-serif;
+        color: #4d4d4d;
+        text-align: justify;
+        }
+        /*End of Contact Details*/
+        /*Footer Section*/
+        #Map_Container {
+        width: 100%;
+        height: 300px;
+        margin-top: 10px;
+        }
+
+        #contact {
+        list-style-type: none;
+        font-family: 'Poppins', sans-serif;
+        color: #4d4d4d;
+        text-align: justify;
+        }
+        footer {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5px;
+        background-color: white;
+        }
+
+        footer > div {
+        background-color: white;
+        padding: 10px;
+        }
+
+        footer h2 {
+        font-family: 'Poppins', sans-serif;
+        color: #4d4d4d;
+        margin-left: 20px;
+        }
+
+        footer p {
+        margin-left: 5px;
+        text-align: justify;
+        font-family: 'Poppins', sans-serif;
+        color: #4d4d4d;
+        }
+
+        footer ul {
+        list-style-type: square;
+        margin-left: 10px;
+        text-align: justify;
+        font-family: 'Poppins', sans-serif;
+        color: #4d4d4d;
+        }
+
+        footer li a {
+        text-decoration: none;
+        color: #4d4d4d;
+        }
+
+        footer ul li:hover {
+        color: #ff4d4d;
+        }
+
+        footer i {
+        color: #4d4d4d;
+        }
+
+        footer i:hover {
+        color: #ff4d4d;
+        }
+
+        /*Copright footer section*/
+        #footer {
+        width: 100%;
+        height: 50px;
+        background-color: #ff4d4d;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        }
+
+        #footer span {
+        float: left;
+        width: 50%;
+        margin-top: 10px;
+        }
+        #footer ul {
+        float: left;
+        width: 45%;
+        margin-left: 20px;
+        }
+        #footer ul li {
+        display: inline;
+        margin-left: 3px;
+        }
+        #footer li a {
+        font-style: normal;
+        color: white;
+        text-decoration: none;
+        }
+        /*End of Footer Section*/
+    }
+
+    /* ----------- Non-Retina Screens ----------- */
+    @media screen
+      and (min-device-width: 1200px)
+      and (max-device-width: 1600px)
+      and (-webkit-min-device-pixel-ratio: 1) {
+        body {
+          width: 100%;
+          overflow-x: hidden;
+        }
+        header {
+          background-color: #999999;
+          font-family: 'Poppins', sans-serif;
+          font-weight: bold;
+          color: #4d4d4d;
+          padding: 50px;
+          text-align: center;
+          width: 100%;
+        }
+        /*NavBar Styling*/
+
+        nav {
+          background-color: white;
+          font-style: normal;
+          width: 100%;
+          height: 50px;
+          width: 100%;
+          margin-left: 450px;
+        }
+
+        nav li {
+            display: inline;
+            list-style-type: none;
+            text-decoration: none;
+            padding: 10px;
+            margin-left: 5px;
+
+        }
+        nav li a{
+          font-style: normal;
+          font-family: 'Lato', sans-serif;
+          font-weight: bold;
+          font-size: 14px;
+          color: #4d4d4d;
+          list-style-type: none;
+          text-decoration: none;
+          margin-left: 10px;
+        }
+        nav li a:hover {
+          color: red;
+        }
+        nav li a:active {
+          color: red;
+        }
+
+        /*End of NavBar Styling*/
+
+        span.breadcrumb li {
+          list-style-type: none;
+          display: inline;
+          text-align: center;
+          font-style: normal;
+          font-family: 'Poppins', sans-serif;
+          display: inline;
+        }
+        span.breadcrumb li a {
+          text-decoration: none;
+          color: #4d4d4d;
+        }
+        span.breadcrumb li a:hover {
+          color: #ff4d4d;
+        }
+
+        /*End of Top Section of Contact Page*/
+        /*Contact Form*/
+        section {
+          float: left;
+          width: 60%;
+          margin-left: 5px;
+        }
+
+        section h2 {
+          font-family: 'Poppins', sans-serif;
+          padding: 20px;
+        }
+
+        input {
+        border: 1px solid lightgrey;
+        width: 250px;
+        height: 40px;
+        border-radius: 3%;
+        }
+
+        input::placeholder {
+        font-family: 'Poppins', sans-serif;
+        color: grey;
+        font-size: 18px;
+        }
+        textarea {
+          border: 1px solid lightgrey;
+          border-radius: 3%;
+        }
+        textarea::placeholder {
+          font-family: 'Poppins', sans-serif;
+          color: grey;
+          font-size: 18px;
+        }
+        button {
+          background-color: #ff4d4d;
+          border: 1px solid #ff4d4d;
+          border-radius: 5%;
+          color: white;
+          font-size: 18px;
+          width: 150px;
+          height: 60px;
+          padding-top: 10px;
+        }
+        /*End of Contact Form*/
+
+        /*Contact Details*/
+        aside {
+          float: left;
+          width: 35%;
+        }
+        aside h2 {
+          font-family: 'Poppins', sans-serif;
+          padding: 20px;
+        }
+
+        hr {
+        width: 40px;
+        height: 2px;
+        font-weight: bold;
+        float: left;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        background-color: #ff4d4d;
+        border: 1px solid #ff4d4d;
+        }
+        ul li {
+        list-style-type: none;
+        font-family: 'Poppins', sans-serif;
+        color: #4d4d4d;
+        text-align: justify;
+        }
+        /*End of Contact Details*/
+        /*Footer Section*/
+        #Map_Container {
+        width: 100%;
+        height: 300px;
+        margin-top: 10px;
+        }
+
+        #contact {
+        list-style-type: none;
+        font-family: 'Poppins', sans-serif;
+        color: #4d4d4d;
+        text-align: justify;
+        }
+        footer {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5px;
+        background-color: white;
+        }
+
+        footer > div {
+        background-color: white;
+        padding: 10px;
+        }
+
+        footer h2 {
+        font-family: 'Poppins', sans-serif;
+        color: #4d4d4d;
+        margin-left: 20px;
+        }
+
+        footer p {
+        margin-left: 5px;
+        text-align: justify;
+        font-family: 'Poppins', sans-serif;
+        color: #4d4d4d;
+        }
+
+        footer ul {
+        list-style-type: square;
+        margin-left: 10px;
+        text-align: justify;
+        font-family: 'Poppins', sans-serif;
+        color: #4d4d4d;
+        }
+
+        footer li a {
+        text-decoration: none;
+        color: #4d4d4d;
+        }
+
+        footer ul li:hover {
+        color: #ff4d4d;
+        }
+
+        footer i {
+        color: #4d4d4d;
+        }
+
+        footer i:hover {
+        color: #ff4d4d;
+        }
+
+        /*Copright footer section*/
+        #footer {
+        width: 100%;
+        height: 50px;
+        background-color: #ff4d4d;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        }
+
+        #footer span {
+        float: left;
+        width: 50%;
+        margin-top: 10px;
+        }
+        #footer ul {
+        float: left;
+        width: 45%;
+        margin-left: 20px;
+        }
+        #footer ul li {
+        display: inline;
+        margin-left: 3px;
+        }
+        #footer li a {
+        font-style: normal;
+        color: white;
+        text-decoration: none;
+        }
+        /*End of Footer Section*/
+    }
+
+    /* ----------- iPad 1, 2, Mini and Air ----------- */
+
+    /* Portrait and Landscape */
+    @media only screen
+      and (min-device-width: 768px)
+      and (max-device-width: 1024px)
+      and (-webkit-min-device-pixel-ratio: 1) {
+        body {
+          width: 100%;
+          overflow-x: hidden;
+        }
+        header {
+          background-color: #999999;
+          font-family: 'Poppins', sans-serif;
+          font-weight: bold;
+          color: #4d4d4d;
+          padding: 50px;
+          text-align: center;
+          width: 100%;
+        }
+        /*NavBar Styling*/
+
+        nav {
+          background-color: white;
+          font-style: normal;
+          width: 100%;
+          height: 50px;
+          width: 100%;
+          margin-left: 450px;
+        }
+
+        nav li {
+            display: inline;
+            list-style-type: none;
+            text-decoration: none;
+            padding: 10px;
+            margin-left: 5px;
+
+        }
+        nav li a{
+          font-style: normal;
+          font-family: 'Lato', sans-serif;
+          font-weight: bold;
+          font-size: 14px;
+          color: #4d4d4d;
+          list-style-type: none;
+          text-decoration: none;
+          margin-left: 10px;
+        }
+        nav li a:hover {
+          color: red;
+        }
+        nav li a:active {
+          color: red;
+        }
+
+        /*End of NavBar Styling*/
+
+        span.breadcrumb li {
+          list-style-type: none;
+          display: inline;
+          text-align: center;
+          font-style: normal;
+          font-family: 'Poppins', sans-serif;
+          display: inline;
+        }
+        span.breadcrumb li a {
+          text-decoration: none;
+          color: #4d4d4d;
+        }
+        span.breadcrumb li a:hover {
+          color: #ff4d4d;
+        }
+
+        /*End of Top Section of Contact Page*/
+        /*Contact Form*/
+        section {
+          float: left;
+          width: 60%;
+          margin-left: 5px;
+        }
+
+        section h2 {
+          font-family: 'Poppins', sans-serif;
+          padding: 20px;
+        }
+
+        input {
+        border: 1px solid lightgrey;
+        width: 250px;
+        height: 40px;
+        border-radius: 3%;
+        }
+
+        input::placeholder {
+        font-family: 'Poppins', sans-serif;
+        color: grey;
+        font-size: 18px;
+        }
+        textarea {
+          border: 1px solid lightgrey;
+          border-radius: 3%;
+        }
+        textarea::placeholder {
+          font-family: 'Poppins', sans-serif;
+          color: grey;
+          font-size: 18px;
+        }
+        button {
+          background-color: #ff4d4d;
+          border: 1px solid #ff4d4d;
+          border-radius: 5%;
+          color: white;
+          font-size: 18px;
+          width: 150px;
+          height: 60px;
+          padding-top: 10px;
+        }
+        /*End of Contact Form*/
+
+        /*Contact Details*/
+        aside {
+          float: left;
+          width: 35%;
+        }
+        aside h2 {
+          font-family: 'Poppins', sans-serif;
+          padding: 20px;
+        }
+
+        hr {
+        width: 40px;
+        height: 2px;
+        font-weight: bold;
+        float: left;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        background-color: #ff4d4d;
+        border: 1px solid #ff4d4d;
+        }
+        ul li {
+        list-style-type: none;
+        font-family: 'Poppins', sans-serif;
+        color: #4d4d4d;
+        text-align: justify;
+        }
+        /*End of Contact Details*/
+        /*Footer Section*/
+        #Map_Container {
+        width: 100%;
+        height: 300px;
+        margin-top: 10px;
+        }
+
+        #contact {
+        list-style-type: none;
+        font-family: 'Poppins', sans-serif;
+        color: #4d4d4d;
+        text-align: justify;
+        }
+        footer {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5px;
+        background-color: white;
+        }
+
+        footer > div {
+        background-color: white;
+        padding: 10px;
+        }
+
+        footer h2 {
+        font-family: 'Poppins', sans-serif;
+        color: #4d4d4d;
+        margin-left: 20px;
+        }
+
+        footer p {
+        margin-left: 5px;
+        text-align: justify;
+        font-family: 'Poppins', sans-serif;
+        color: #4d4d4d;
+        }
+
+        footer ul {
+        list-style-type: square;
+        margin-left: 10px;
+        text-align: justify;
+        font-family: 'Poppins', sans-serif;
+        color: #4d4d4d;
+        }
+
+        footer li a {
+        text-decoration: none;
+        color: #4d4d4d;
+        }
+
+        footer ul li:hover {
+        color: #ff4d4d;
+        }
+
+        footer i {
+        color: #4d4d4d;
+        }
+
+        footer i:hover {
+        color: #ff4d4d;
+        }
+
+        /*Copright footer section*/
+        #footer {
+        width: 100%;
+        height: 50px;
+        background-color: #ff4d4d;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        }
+
+        #footer span {
+        float: left;
+        width: 50%;
+        margin-top: 10px;
+        }
+        #footer ul {
+        float: left;
+        width: 45%;
+        margin-left: 20px;
+        }
+        #footer ul li {
+        display: inline;
+        margin-left: 3px;
+        }
+        #footer li a {
+        font-style: normal;
+        color: white;
+        text-decoration: none;
+        }
+        /*End of Footer Section*/
+      }
+
+    /* ----------- Galaxy S3 ----------- */
+
+    /* Portrait and Landscape */
+    @media screen
+    and (device-width: 320px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 2) {
+        body {
+          width: 100%;
+          overflow-x: hidden;
+        }
+        header {
+          background-color: #999999;
+          font-family: 'Poppins', sans-serif;
+          font-weight: bold;
+          color: #4d4d4d;
+          padding: 50px;
+          text-align: center;
+          width: 100%;
+        }
+        /*NavBar Styling*/
+
+        nav {
+          background-color: white;
+          font-style: normal;
+          width: 100%;
+          height: 50px;
+          width: 100%;
+          margin-left: 450px;
+        }
+
+        nav li {
+            display: inline;
+            list-style-type: none;
+            text-decoration: none;
+            padding: 10px;
+            margin-left: 5px;
+
+        }
+        nav li a{
+          font-style: normal;
+          font-family: 'Lato', sans-serif;
+          font-weight: bold;
+          font-size: 14px;
+          color: #4d4d4d;
+          list-style-type: none;
+          text-decoration: none;
+          margin-left: 10px;
+        }
+        nav li a:hover {
+          color: red;
+        }
+        nav li a:active {
+          color: red;
+        }
+
+        /*End of NavBar Styling*/
+
+        span.breadcrumb li {
+          list-style-type: none;
+          display: inline;
+          text-align: center;
+          font-style: normal;
+          font-family: 'Poppins', sans-serif;
+          display: inline;
+        }
+        span.breadcrumb li a {
+          text-decoration: none;
+          color: #4d4d4d;
+        }
+        span.breadcrumb li a:hover {
+          color: #ff4d4d;
+        }
+
+        /*End of Top Section of Contact Page*/
+        /*Contact Form*/
+        section {
+          float: left;
+          width: 60%;
+          margin-left: 5px;
+        }
+
+        section h2 {
+          font-family: 'Poppins', sans-serif;
+          padding: 20px;
+        }
+
+        input {
+        border: 1px solid lightgrey;
+        width: 250px;
+        height: 40px;
+        border-radius: 3%;
+        }
+
+        input::placeholder {
+        font-family: 'Poppins', sans-serif;
+        color: grey;
+        font-size: 18px;
+        }
+        textarea {
+          border: 1px solid lightgrey;
+          border-radius: 3%;
+        }
+        textarea::placeholder {
+          font-family: 'Poppins', sans-serif;
+          color: grey;
+          font-size: 18px;
+        }
+        button {
+          background-color: #ff4d4d;
+          border: 1px solid #ff4d4d;
+          border-radius: 5%;
+          color: white;
+          font-size: 18px;
+          width: 150px;
+          height: 60px;
+          padding-top: 10px;
+        }
+        /*End of Contact Form*/
+
+        /*Contact Details*/
+        aside {
+          float: left;
+          width: 35%;
+        }
+        aside h2 {
+          font-family: 'Poppins', sans-serif;
+          padding: 20px;
+        }
+
+        hr {
+        width: 40px;
+        height: 2px;
+        font-weight: bold;
+        float: left;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        background-color: #ff4d4d;
+        border: 1px solid #ff4d4d;
+        }
+        ul li {
+        list-style-type: none;
+        font-family: 'Poppins', sans-serif;
+        color: #4d4d4d;
+        text-align: justify;
+        }
+        /*End of Contact Details*/
+        /*Footer Section*/
+        #Map_Container {
+        width: 100%;
+        height: 300px;
+        margin-top: 10px;
+        }
+
+        #contact {
+        list-style-type: none;
+        font-family: 'Poppins', sans-serif;
+        color: #4d4d4d;
+        text-align: justify;
+        }
+        footer {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5px;
+        background-color: white;
+        }
+
+        footer > div {
+        background-color: white;
+        padding: 10px;
+        }
+
+        footer h2 {
+        font-family: 'Poppins', sans-serif;
+        color: #4d4d4d;
+        margin-left: 20px;
+        }
+
+        footer p {
+        margin-left: 5px;
+        text-align: justify;
+        font-family: 'Poppins', sans-serif;
+        color: #4d4d4d;
+        }
+
+        footer ul {
+        list-style-type: square;
+        margin-left: 10px;
+        text-align: justify;
+        font-family: 'Poppins', sans-serif;
+        color: #4d4d4d;
+        }
+
+        footer li a {
+        text-decoration: none;
+        color: #4d4d4d;
+        }
+
+        footer ul li:hover {
+        color: #ff4d4d;
+        }
+
+        footer i {
+        color: #4d4d4d;
+        }
+
+        footer i:hover {
+        color: #ff4d4d;
+        }
+
+        /*Copright footer section*/
+        #footer {
+        width: 100%;
+        height: 50px;
+        background-color: #ff4d4d;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        }
+
+        #footer span {
+        float: left;
+        width: 50%;
+        margin-top: 10px;
+        }
+        #footer ul {
+        float: left;
+        width: 45%;
+        margin-left: 20px;
+        }
+        #footer ul li {
+        display: inline;
+        margin-left: 3px;
+        }
+        #footer li a {
+        font-style: normal;
+        color: white;
+        text-decoration: none;
+        }
+        /*End of Footer Section*/
+    }
+
+    /* ----------- iPhone 4 and 4S ----------- */
+
+    /* Portrait and Landscape */
+    @media only screen
+      and (min-device-width: 320px)
+      and (max-device-width: 480px)
+      and (-webkit-min-device-pixel-ratio: 2){
+        body {
+          width: 100%;
+          overflow-x: hidden;
+        }
+        header {
+          background-color: #999999;
+          font-family: 'Poppins', sans-serif;
+          font-weight: bold;
+          color: #4d4d4d;
+          padding: 50px;
+          text-align: center;
+          width: 100%;
+        }
+        /*NavBar Styling*/
+
+        nav {
+          background-color: white;
+          font-style: normal;
+          width: 100%;
+          height: 50px;
+          width: 100%;
+          margin-left: 450px;
+        }
+
+        nav li {
+            display: inline;
+            list-style-type: none;
+            text-decoration: none;
+            padding: 10px;
+            margin-left: 5px;
+
+        }
+        nav li a{
+          font-style: normal;
+          font-family: 'Lato', sans-serif;
+          font-weight: bold;
+          font-size: 14px;
+          color: #4d4d4d;
+          list-style-type: none;
+          text-decoration: none;
+          margin-left: 10px;
+        }
+        nav li a:hover {
+          color: red;
+        }
+        nav li a:active {
+          color: red;
+        }
+
+        /*End of NavBar Styling*/
+
+        span.breadcrumb li {
+          list-style-type: none;
+          display: inline;
+          text-align: center;
+          font-style: normal;
+          font-family: 'Poppins', sans-serif;
+          display: inline;
+        }
+        span.breadcrumb li a {
+          text-decoration: none;
+          color: #4d4d4d;
+        }
+        span.breadcrumb li a:hover {
+          color: #ff4d4d;
+        }
+
+        /*End of Top Section of Contact Page*/
+        /*Contact Form*/
+        section {
+          float: left;
+          width: 60%;
+          margin-left: 5px;
+        }
+
+        section h2 {
+          font-family: 'Poppins', sans-serif;
+          padding: 20px;
+        }
+
+        input {
+        border: 1px solid lightgrey;
+        width: 250px;
+        height: 40px;
+        border-radius: 3%;
+        }
+
+        input::placeholder {
+        font-family: 'Poppins', sans-serif;
+        color: grey;
+        font-size: 18px;
+        }
+        textarea {
+          border: 1px solid lightgrey;
+          border-radius: 3%;
+        }
+        textarea::placeholder {
+          font-family: 'Poppins', sans-serif;
+          color: grey;
+          font-size: 18px;
+        }
+        button {
+          background-color: #ff4d4d;
+          border: 1px solid #ff4d4d;
+          border-radius: 5%;
+          color: white;
+          font-size: 18px;
+          width: 150px;
+          height: 60px;
+          padding-top: 10px;
+        }
+        /*End of Contact Form*/
+
+        /*Contact Details*/
+        aside {
+          float: left;
+          width: 35%;
+        }
+        aside h2 {
+          font-family: 'Poppins', sans-serif;
+          padding: 20px;
+        }
+
+        hr {
+        width: 40px;
+        height: 2px;
+        font-weight: bold;
+        float: left;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        background-color: #ff4d4d;
+        border: 1px solid #ff4d4d;
+        }
+        ul li {
+        list-style-type: none;
+        font-family: 'Poppins', sans-serif;
+        color: #4d4d4d;
+        text-align: justify;
+        }
+        /*End of Contact Details*/
+        /*Footer Section*/
+        #Map_Container {
+        width: 100%;
+        height: 300px;
+        margin-top: 10px;
+        }
+
+        #contact {
+        list-style-type: none;
+        font-family: 'Poppins', sans-serif;
+        color: #4d4d4d;
+        text-align: justify;
+        }
+        footer {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5px;
+        background-color: white;
+        }
+
+        footer > div {
+        background-color: white;
+        padding: 10px;
+        }
+
+        footer h2 {
+        font-family: 'Poppins', sans-serif;
+        color: #4d4d4d;
+        margin-left: 20px;
+        }
+
+        footer p {
+        margin-left: 5px;
+        text-align: justify;
+        font-family: 'Poppins', sans-serif;
+        color: #4d4d4d;
+        }
+
+        footer ul {
+        list-style-type: square;
+        margin-left: 10px;
+        text-align: justify;
+        font-family: 'Poppins', sans-serif;
+        color: #4d4d4d;
+        }
+
+        footer li a {
+        text-decoration: none;
+        color: #4d4d4d;
+        }
+
+        footer ul li:hover {
+        color: #ff4d4d;
+        }
+
+        footer i {
+        color: #4d4d4d;
+        }
+
+        footer i:hover {
+        color: #ff4d4d;
+        }
+
+        /*Copright footer section*/
+        #footer {
+        width: 100%;
+        height: 50px;
+        background-color: #ff4d4d;
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        }
+
+        #footer span {
+        float: left;
+        width: 50%;
+        margin-top: 10px;
+        }
+        #footer ul {
+        float: left;
+        width: 45%;
+        margin-left: 20px;
+        }
+        #footer ul li {
+        display: inline;
+        margin-left: 3px;
+        }
+        #footer li a {
+        font-style: normal;
+        color: white;
+        text-decoration: none;
+        }
+        /*End of Footer Section*/
+      }
+    </style>
+  </head>
+  <body>
+
+    <!--NavBar-->
+    <nav>
+      <li><a href="home.html">HOME</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="portfolio.html">PORTFOLIO</a></li>
+      <li><a href="course.html">COURSE</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </nav>
+    <!--NavBar-->
+
+    <header>
+
+      <h1>CONTACT US</h1>
+      <span class="breadcrumb">
+        <li><a href="home.html">HOME</a></li>
+        <li><i class="fa fa-long-arrow-right"></i></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </span>
+    </header>
+
+    <!--Contact Form for Clients-->
+    <section>
+      <h2>Send Us a Message</h2>
+      <form>
+        <input class="form-control form-group" id="contact-name" type="name" name="name" placeholder="Your Name">
+        <span class='error-message form-group' id='name-error'></span>
+        <input class="form-control form-group" id="contact-email" type="email" name="email" placeholder="Your Email">
+        <span class='error-message' id='email-error'></span>
+        <input class="form-control form-group" id="contact-phone" type="number" name="number" placeholder="Phone Number">
+        <span class='error-message form-group' id='phone-error'></span><br><br>
+        <textarea class="form-control form-group" id='contact-message'  name="message" placeholder="Your Messages" style="width: 760px; height:200px"></textarea><br><br>
+        <button onclick='validateForm()' class="btn btn-default"><strong>Send Email</strong></button>
+        <span class='error-message' id='submit-error'></span>
+      </form>
+    </section>
+    <!--End of Contact Form-->
+
+    <!--Contact Details on how to Contact Code4CapeTown-->
+    <aside>
+      <h2>Contact Info</h2>
+      <hr/><br>
+        <p></p>
+          <ul>
+            <li><i class="fa fa-phone-square" style="font-size:24px"></i> &nbsp; &nbsp;+(27)021 685 0991</li>
+            <br>
+            <li><i class="fa fa-envelope-o" style="font-size:24px"></i> &nbsp; &nbsp;info@code4ct.com</li>
+            <br>
+            <li><i class="material-icons" style="font-size:24px">query_builder</i> Mon - Fri 09,00-12,00</li>
+            <br>
+            <li>&nbsp;<i class="fa fa-map-marker" style="font-size:24px"></i> &nbsp; Innovate South Africa,<br> &nbsp; 403 Old Castle Brewery, 6 Beach Rd,<br> &nbsp; Woodstock, Cape Town,<br>&nbsp; 8000 </li>
+          </ul>
+    </aside>
+    <!--End of Contact Details Page-->
+
+    <!--Embed Map with Code4CapeTown Location-->
+    <div id="Map_container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d827.6595125086247!2d18.448715!3d-33.924714!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6a0ebf49da5aabab!2sCodeSpace!5e0!3m2!1sen!2sza!4v1510649775058" width="100%" height="450px" ></iframe>
+      <br>
+    </div>
+    <!--End of Embed Map-->
+
+    <!--Footer for Code4CapeTown-->
+    <footer>
+      <div>
+        <h2>Legal</h2>
+          <p>Code for Cape Town is a project of Innovate South Africa, which is a registered non-profit (137806NPO) and a Public Beneficiary Organisation (930050338)</p>
+      </div>
+
+      <div>
+        <h2>Company</h2>
+          <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="http://code4ct.com/blog/">Blog</a></li>
+          </ul>
+      </div>
+
+      <!--Contact Details on Footer-->
+      <div id="contact">
+        <h2>Contact</h2>
+          <li><i class="fa fa-phone-square" style="font-size:24px"></i> &nbsp; &nbsp;+(27)021 685 0991</li>
+          <li><i class="fa fa-envelope-o" style="font-size:24px"></i> &nbsp; &nbsp;info@code4ct.com</li>
+          <li>&nbsp;<i class="fa fa-map-marker" style="font-size:24px"></i> &nbsp;Physical address: Innovate South Africa,<br> &nbsp; &nbsp; &nbsp; 403 Old Castle Brewery, 6 Beach Rd,<br> &nbsp; &nbsp; &nbsp; Woodstock, Cape Town, 7915 </li>
+      </div>
+    </footer>
+    <!--Copyright Footer-->
+    <div id="footer">
+      <span>Copright 2017 PRIVATE POLICY</span>
+        <ul>
+          <li>Follow us:</li>
+          <li><a href="https://www.facebook.com/code4ct/"><i class="fa fa-facebook"></i></a><li>
+          <li><a href="https://twitter.com/@code4ct"><i class="fa fa-twitter"></i></a><li>
+          <li><a href="https://www.linkedin.com/company/9414552/"><i class="fa fa-linkedin"></i></a><li>
+        </ul>
+    </div>
+  </body>
+
+  <script>
+  function validateName() {
+
+var name = document.getElementById('contact-name').value;
+
+if(name.length == 0) {
+
+  producePrompt('Name is required', 'name-error' , 'red')
+  return false;
+
+}
+
+if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
+
+  producePrompt('First and last name, please.','name-error', 'red');
+  return false;
+
+}
+
+producePrompt('Valid', 'name-error', 'green');
+return true;
+
+}
+
+function validatePhone() {
+
+var phone = document.getElementById('contact-phone').value;
+
+  if(phone.length == 0) {
+    producePrompt('Phone number is required.', 'phone-error', 'red');
+    return false;
+  }
+
+  if(phone.length != 10) {
+    producePrompt('Include area code.', 'phone-error', 'red');
+    return false;
+  }
+
+  if(!phone.match(/^[0-9]{10}$/)) {
+    producePrompt('Only digits, please.' ,'phone-error', 'red');
+    return false;
+  }
+
+  producePrompt('Valid', 'phone-error', 'green');
+  return true;
+
+}
+
+function validateEmail () {
+
+var email = document.getElementById('contact-email').value;
+
+if(email.length == 0) {
+
+  producePrompt('Email Invalid','email-error', 'red');
+  return false;
+
+}
+
+if(!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+
+  producePrompt('Email Invalid', 'email-error', 'red');
+  return false;
+
+}
+
+producePrompt('Valid', 'email-error', 'green');
+return true;
+
+}
+
+function validateMessage() {
+var message = document.getElementById('contact-message').value;
+var required = 30;
+var left = required - message.length;
+
+if (left > 0) {
+  producePrompt(left + ' more characters required','message-error','red');
+  return false;
+}
+
+producePrompt('Valid', 'message-error', 'green');
+return true;
+
+}
+
+function validateForm() {
+if (!validateName() || !validatePhone() || !validateEmail() || !validateMessage()) {
+  jsShow('submit-error');
+  producePrompt('Please fix errors to submit.', 'submit-error', 'red');
+  setTimeout(function(){jsHide('submit-error');}, 2000);
+}
+else {
+
+}
+}
+
+function jsShow(id) {
+document.getElementById(id).style.display = 'block';
+}
+
+function jsHide(id) {
+document.getElementById(id).style.display = 'none';
+}
+
+
+
+
+function producePrompt(message, promptLocation, color) {
+
+document.getElementById(promptLocation).innerHTML = message;
+document.getElementById(promptLocation).style.color = color;
+
+
+}
+
+  </script>
+</html>

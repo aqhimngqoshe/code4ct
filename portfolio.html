@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Code4CapeTown/Portfolio/</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Poppins" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" href="images/logo/code4ct-logo.jpg" type="image/jpg">
+
+    <style>
+
+    /*Image Enlargement*/
+
+    header {
+      background-color: #999999;
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+      color: #4d4d4d;
+      padding: 50px;
+      text-align: center;
+      width: 100%;
+    }
+    /*NavBar Styling*/
+
+    nav {
+      background-color: white;
+      font-style: normal;
+      width: 100%;
+      height: 50px;
+      width: 100%;
+      margin-left: 450px;
+      position: relative;
+    }
+
+    nav li {
+        display: inline;
+        list-style-type: none;
+        text-decoration: none;
+        padding: 10px;
+        margin-left: 5px;
+
+    }
+    nav li a{
+      font-style: normal;
+      font-family: 'Lato', sans-serif;
+      font-weight: bold;
+      font-size: 14px;
+      color: #4d4d4d;
+      list-style-type: none;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+    nav li a:hover {
+      color: red;
+    }
+    nav li a:active {
+      color: red;
+    }
+
+    /*End of NavBar Styling*/
+
+    span.breadcrumb li {
+      list-style-type: none;
+      display: inline;
+      text-align: center;
+      font-style: normal;
+      font-family: 'Poppins', sans-serif;
+      display: inline;
+    }
+    span.breadcrumb li a {
+      text-decoration: none;
+      color: #4d4d4d;
+    }
+    span.breadcrumb li a:hover {
+      color: #ff4d4d;
+    }
+    /*END of Top of the Page Styling*/
+
+    /*Portfolio about CODE4CAPETWON*/
+    #Portfolio_Container {
+      width: 100%;
+      background-color: white;
+      font-family: 'Poppins', sans-serif;
+      color: black;
+    }
+
+    #Portfolio_Container hr {
+      width: 60px;
+      height: 2px;
+      font-weight: bold;
+      float: left;
+      margin-left: 620px;
+      margin-bottom: 20px;
+      background-color: #ff4d4d;
+      border: 1px solid #ff4d4d;
+    }
+
+    #Portfolio_Container h2 {
+      text-align: center;
+      margin: 20px;
+      padding: 10px;
+    }
+
+    #Portfolio_Container p {
+      text-align: justify;
+      padding: 50px;
+    }
+    /*End of Portfolio_Container*/
+
+    /*Images*/
+    section {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    #Image_Page1,
+    #Image_Page2 {
+      display: inline;
+    }
+    #button1, #button2 {
+      margin-top: 20px;
+    }
+    /*Button 1 on DIV1(Image_Page1)*/
+    #button1:focus {
+      font-weight: bold;
+      color: white;
+      background-color: #ff4d4d;
+    }
+    /*Button 2 on DIV2(Image_Page2)*/
+    #button2:focus {
+      font-weight: bold;
+      color: white;
+      background-color: #ff4d4d;
+    }
+
+    /*Logo Sliding(Carousel)*/
+    /*Carousel*/
+    #Logo_Carousel {
+      width: 100%;
+      height: 200px;
+      background-color: black;
+    }
+    #carousel_inner {
+      float: left;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      background: black;
+    }
+
+    #carousel_ul li img {
+      width: 100%;
+      height: 200px;
+    }
+
+    #carousel_ul {
+      position: relative;
+      left: -210px;
+      list-style-type: none;
+      margin: 0px;
+      padding: 0px;
+      width: 200%;
+      padding-bottom: 10px;
+    }
+
+    #carousel_ul li {
+      float: left;
+      width: 200px;
+      padding: 0px;
+      height: 110px;
+      background: #000000;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+
+    #carousel_ul li img {
+      margin-bottom: -4px;
+      cursor: pointer;
+      cursor: hand;
+      border: 0px;
+    }
+
+    #left_scroll, #right_scroll {
+      float: left;
+      height: 130px;
+      width: 35px;
+      margin-top: 50px;
+      margin-left: 20px;
+    }
+
+    #left_scroll img, #right_scroll img {
+      border: 0;
+      cursor: pointer;
+      cursor: hand;
+    }
+
+    #left_scroll img {
+      width: 25px;
+      height: 25px;
+    }
+
+    #right_scroll img {
+      width: 25px;
+      height: 25px;
+    }
+    /*End of Carousel*/
+
+    /*Footer Styling*/
+    #contact {
+      list-style-type: none;
+      font-family: 'Poppins', sans-serif;
+      color: #4d4d4d;
+      text-align: justify;
+    }
+    footer {
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 5px;
+      background-color: white;
+    }
+
+    footer > div {
+      background-color: white;
+      padding: 10px;
+    }
+
+    footer h2 {
+      font-family: 'Poppins', sans-serif;
+      color: #4d4d4d;
+      margin-left: 20px;
+    }
+
+    footer p {
+      margin-left: 5px;
+      text-align: justify;
+      font-family: 'Poppins', sans-serif;
+      color: #4d4d4d;
+    }
+
+    footer ul {
+      list-style-type: square;
+      margin-left: 10px;
+      text-align: justify;
+      font-family: 'Poppins', sans-serif;
+      color: #4d4d4d;
+    }
+
+    footer li a {
+      text-decoration: none;
+      color: #4d4d4d;
+    }
+
+    footer ul li:hover {
+      color: #ff4d4d;
+    }
+
+    footer i {
+      color: #4d4d4d;
+    }
+
+    footer i:hover {
+      color: #ff4d4d;
+    }
+
+    /*Copright footer section*/
+    #footer {
+      width: 100%;
+      height: 50px;
+      background-color: #ff4d4d;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    #footer span {
+      float: left;
+      width: 50%;
+      margin-top: 10px;
+    }
+    #footer ul {
+      float: left;
+      width: 45%;
+      margin-left: 20px;
+    }
+    #footer ul li {
+      display: inline;
+      margin-left: 3px;
+    }
+    #footer li a {
+      font-style: normal;
+      color: white;
+      text-decoration: none;
+    }
+    /*End of Footer Section*/
+
+
+    @media screen
+      and (device-width: 320px)
+      and (device-height: 640px)
+      and (-webkit-device-pixel-ratio: 2) {
+        body {
+          width: 100%;
+          overflow-x: hidden;
+        }
+        /*Image Enlargement*/
+
+        header {
+          background-color: #999999;
+          font-family: 'Poppins', sans-serif;
+          font-weight: bold;
+          color: #4d4d4d;
+          padding: 50px;
+          text-align: center;
+          width: 100%;
+        }
+        /*NavBar Styling*/
+
+        nav {
+          background-color: white;
+          font-style: normal;
+          width: 100%;
+          height: 50px;
+          width: 100%;
+          margin-left: 450px;
+          position: relative;
+        }
+
+        nav li {
+            display: inline;
+            list-style-type: none;
+            text-decoration: none;
+            padding: 10px;
+            margin-left: 5px;
+
+        }
+        nav li a{
+          font-style: normal;
+          font-family: 'Lato', sans-serif;
+          font-weight: bold;
+          font-size: 14px;
+          color: #4d4d4d;
+          list-style-type: none;
+          text-decoration: none;
+          margin-left: 10px;
+        }
+        nav li a:hover {
+          color: red;
+        }
+        nav li a:active {
+          color: red;
+        }
+
+        /*End of NavBar Styling*/
+
+        span.breadcrumb li {
+          list-style-type: none;
+          display: inline;
+          text-align: center;
+          font-style: normal;
+          font-family: 'Poppins', sans-serif;
+          display: inline;
+        }
+        span.breadcrumb li a {
+          text-decoration: none;
+          color: #4d4d4d;
+        }
+        span.breadcrumb li a:hover {
+          color: #ff4d4d;
+        }
+        /*END of Top of the Page Styling*/
+
+        /*Portfolio about CODE4CAPETWON*/
+        #Portfolio_Container {
+          width: 100%;
+          background-color: white;
+          font-family: 'Poppins', sans-serif;
+          color: black;
+        }
+
+        #Portfolio_Container hr {
+          width: 60px;
+          height: 2px;
+          font-weight: bold;
+          float: left;
+          margin-left: 620px;
+          margin-bottom: 20px;
+          background-color: #ff4d4d;
+          border: 1px solid #ff4d4d;
+        }
+
+        #Portfolio_Container h2 {
+          text-align: center;
+          margin: 20px;
+          padding: 10px;
+        }
+
+        #Portfolio_Container p {
+          text-align: justify;
+          padding: 50px;
+        }
+        /*End of Portfolio_Container*/
+
+        /*Images*/
+        section {
+          width: 100%;
+          height: auto;
+          position: relative;
+        }
+        #Image_Page1,
+        #Image_Page2 {
+          display: inline;
+        }
+        #button1, #button2 {
+          margin-top: 20px;
+        }
+        /*Button 1 on DIV1(Image_Page1)*/
+        #button1:focus {
+          font-weight: bold;
+          color: white;
+          background-color: #ff4d4d;
+        }
+        /*Button 2 on DIV2(Image_Page2)*/
+        #button2:focus {
+          font-weight: bold;
+          color: white;
+          background-color: #ff4d4d;
+        }
+
+        /*Logo Sliding(Carousel)*/
+        /*Carousel*/
+        #Logo_Carousel {
+          width: 100%;
+          height: 200px;
+          background-color: black;
+        }
+        #carousel_inner {
+          float: left;
+          width: 100%;
+          height: 200px;
+          overflow: hidden;
+          background: black;
+        }
+
+        #carousel_ul li img {
+          width: 100%;
+          height: 200px;
+        }
+
+        #carousel_ul {
+          position: relative;
+          left: -210px;
+          list-style-type: none;
+          margin: 0px;
+          padding: 0px;
+          width: 200%;
+          padding-bottom: 10px;
+        }
+
+        #carousel_ul li {
+          float: left;
+          width: 200px;
+          padding: 0px;
+          height: 110px;
+          background: #000000;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+
+        #carousel_ul li img {
+          margin-bottom: -4px;
+          cursor: pointer;
+          cursor: hand;
+          border: 0px;
+        }
+
+        #left_scroll, #right_scroll {
+          float: left;
+          height: 130px;
+          width: 35px;
+          margin-top: 50px;
+          margin-left: 20px;
+        }
+
+        #left_scroll img, #right_scroll img {
+          border: 0;
+          cursor: pointer;
+          cursor: hand;
+        }
+
+        #left_scroll img {
+          width: 25px;
+          height: 25px;
+        }
+
+        #right_scroll img {
+          width: 25px;
+          height: 25px;
+        }
+        /*End of Carousel*/
+
+        /*Footer Styling*/
+        #contact {
+          list-style-type: none;
+          font-family: 'Poppins', sans-serif;
+          color: #4d4d4d;
+          text-align: justify;
+        }
+        footer {
+          display: grid;
+          grid-template-rows: 1fr;
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 5px;
+          background-color: white;
+        }
+
+        footer > div {
+          background-color: white;
+          padding: 10px;
+        }
+
+        footer h2 {
+          font-family: 'Poppins', sans-serif;
+          color: #4d4d4d;
+          margin-left: 20px;
+        }
+
+        footer p {
+          margin-left: 5px;
+          text-align: justify;
+          font-family: 'Poppins', sans-serif;
+          color: #4d4d4d;
+        }
+
+        footer ul {
+          list-style-type: square;
+          margin-left: 10px;
+          text-align: justify;
+          font-family: 'Poppins', sans-serif;
+          color: #4d4d4d;
+        }
+
+        footer li a {
+          text-decoration: none;
+          color: #4d4d4d;
+        }
+
+        footer ul li:hover {
+          color: #ff4d4d;
+        }
+
+        footer i {
+          color: #4d4d4d;
+        }
+
+        footer i:hover {
+          color: #ff4d4d;
+        }
+
+        /*Copright footer section*/
+        #footer {
+          width: 100%;
+          height: 50px;
+          background-color: #ff4d4d;
+          color: white;
+          font-family: 'Poppins', sans-serif;
+        }
+
+        #footer span {
+          float: left;
+          width: 50%;
+          margin-top: 10px;
+        }
+        #footer ul {
+          float: left;
+          width: 45%;
+          margin-left: 20px;
+        }
+        #footer ul li {
+          display: inline;
+          margin-left: 3px;
+        }
+        #footer li a {
+          font-style: normal;
+          color: white;
+          text-decoration: none;
+        }
+        /*End of Footer Section*/
+    }
+
+    /* ----------- iPad ----------- */
+
+    /* Portrait and Landscape */
+    @media
+      (min-device-width: 728px)
+      and (max-device-width: 1204px) {
+        body {
+          width: 100%;
+          overflow-x: hidden;
+        }
+        /*Image Enlargement*/
+
+        header {
+          background-color: #999999;
+          font-family: 'Poppins', sans-serif;
+          font-weight: bold;
+          color: #4d4d4d;
+          padding: 50px;
+          text-align: center;
+          width: 100%;
+        }
+        /*NavBar Styling*/
+
+        nav {
+          background-color: white;
+          font-style: normal;
+          width: 100%;
+          height: 50px;
+          width: 100%;
+          margin-left: 450px;
+          position: relative;
+        }
+
+        nav li {
+            display: inline;
+            list-style-type: none;
+            text-decoration: none;
+            padding: 10px;
+            margin-left: 5px;
+
+        }
+        nav li a{
+          font-style: normal;
+          font-family: 'Lato', sans-serif;
+          font-weight: bold;
+          font-size: 14px;
+          color: #4d4d4d;
+          list-style-type: none;
+          text-decoration: none;
+          margin-left: 10px;
+        }
+        nav li a:hover {
+          color: red;
+        }
+        nav li a:active {
+          color: red;
+        }
+
+        /*End of NavBar Styling*/
+
+        span.breadcrumb li {
+          list-style-type: none;
+          display: inline;
+          text-align: center;
+          font-style: normal;
+          font-family: 'Poppins', sans-serif;
+          display: inline;
+        }
+        span.breadcrumb li a {
+          text-decoration: none;
+          color: #4d4d4d;
+        }
+        span.breadcrumb li a:hover {
+          color: #ff4d4d;
+        }
+        /*END of Top of the Page Styling*/
+
+        /*Portfolio about CODE4CAPETWON*/
+        #Portfolio_Container {
+          width: 100%;
+          background-color: white;
+          font-family: 'Poppins', sans-serif;
+          color: black;
+        }
+
+        #Portfolio_Container hr {
+          width: 60px;
+          height: 2px;
+          font-weight: bold;
+          float: left;
+          margin-left: 620px;
+          margin-bottom: 20px;
+          background-color: #ff4d4d;
+          border: 1px solid #ff4d4d;
+        }
+
+        #Portfolio_Container h2 {
+          text-align: center;
+          margin: 20px;
+          padding: 10px;
+        }
+
+        #Portfolio_Container p {
+          text-align: justify;
+          padding: 50px;
+        }
+        /*End of Portfolio_Container*/
+
+        /*Images*/
+        section {
+          width: 100%;
+          height: auto;
+          position: relative;
+        }
+        #Image_Page1,
+        #Image_Page2 {
+          display: inline;
+        }
+        #button1, #button2 {
+          margin-top: 20px;
+        }
+        /*Button 1 on DIV1(Image_Page1)*/
+        #button1:focus {
+          font-weight: bold;
+          color: white;
+          background-color: #ff4d4d;
+        }
+        /*Button 2 on DIV2(Image_Page2)*/
+        #button2:focus {
+          font-weight: bold;
+          color: white;
+          background-color: #ff4d4d;
+        }
+
+        /*Logo Sliding(Carousel)*/
+        /*Carousel*/
+        #Logo_Carousel {
+          width: 100%;
+          height: 200px;
+          background-color: black;
+        }
+        #carousel_inner {
+          float: left;
+          width: 100%;
+          height: 200px;
+          overflow: hidden;
+          background: black;
+        }
+
+        #carousel_ul li img {
+          width: 100%;
+          height: 200px;
+        }
+
+        #carousel_ul {
+          position: relative;
+          left: -210px;
+          list-style-type: none;
+          margin: 0px;
+          padding: 0px;
+          width: 200%;
+          padding-bottom: 10px;
+        }
+
+        #carousel_ul li {
+          float: left;
+          width: 200px;
+          padding: 0px;
+          height: 130px;
+          background: #000000;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+
+        #carousel_ul li img {
+          margin-bottom: -8px;
+          cursor: pointer;
+          cursor: hand;
+          border: 0px;
+        }
+
+        #left_scroll, #right_scroll {
+          float: left;
+          height: 140px;
+          width: 45px;
+          margin-top: 50px;
+          margin-left: 20px;
+        }
+
+        #left_scroll img, #right_scroll img {
+          border: 0;
+          cursor: pointer;
+          cursor: hand;
+        }
+
+        #left_scroll img {
+          width: 25px;
+          height: 30px;
+        }
+
+        #right_scroll img {
+          width: 25px;
+          height: 30px;
+        }
+        /*End of Carousel*/
+
+        /*Footer Styling*/
+        #contact {
+          list-style-type: none;
+          font-family: 'Poppins', sans-serif;
+          color: #4d4d4d;
+          text-align: justify;
+        }
+        footer {
+          display: grid;
+          grid-template-rows: 1fr;
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 5px;
+          background-color: white;
+        }
+
+        footer > div {
+          background-color: white;
+          padding: 10px;
+        }
+
+        footer h2 {
+          font-family: 'Poppins', sans-serif;
+          color: #4d4d4d;
+          margin-left: 20px;
+        }
+
+        footer p {
+          margin-left: 5px;
+          text-align: justify;
+          font-family: 'Poppins', sans-serif;
+          color: #4d4d4d;
+        }
+
+        footer ul {
+          list-style-type: square;
+          margin-left: 10px;
+          text-align: justify;
+          font-family: 'Poppins', sans-serif;
+          color: #4d4d4d;
+        }
+
+        footer li a {
+          text-decoration: none;
+          color: #4d4d4d;
+        }
+
+        footer ul li:hover {
+          color: #ff4d4d;
+        }
+
+        footer i {
+          color: #4d4d4d;
+        }
+
+        footer i:hover {
+          color: #ff4d4d;
+        }
+
+        /*Copright footer section*/
+        #footer {
+          width: 100%;
+          height: 50px;
+          background-color: #ff4d4d;
+          color: white;
+          font-family: 'Poppins', sans-serif;
+        }
+
+        #footer span {
+          float: left;
+          width: 50%;
+          margin-top: 10px;
+        }
+        #footer ul {
+          float: left;
+          width: 45%;
+          margin-left: 20px;
+        }
+        #footer ul li {
+          display: inline;
+          margin-left: 3px;
+        }
+        #footer li a {
+          font-style: normal;
+          color: white;
+          text-decoration: none;
+        }
+        /*End of Footer Section*/
+    }
+
+    </style>
+  </head>
+  <body>
+    <nav>
+      <li><a href="home.html">HOME</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="portfolio.html">PORTFOLIO</a></li>
+      <li><a href="course.html">COURSE</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </nav>
+    <header>
+        <h1>PORTFOLIO</h1>
+        <span class="breadcrumb">
+          <li><a href="home.html">HOME</a></li>
+          <li><i class="fa fa-long-arrow-right"></i></li>
+          <li><a href="portfolio.html">PORTFOLIO</a></li>
+        </span>
+    </header>
+
+    <!--Our Portfolio about Code4CapeTown-->
+    <div id="Portfolio_Container">
+      <h2>Our Awesome Portfolio</h2>
+      <hr/>
+      <br>
+        <p>Code for Cape Town strives to see young women empowered to leverage technology for social innovation, so that there is greater diversity in the African tech industry.  Code for Cape Town equips high potential female learners with the coding, problem solving and life skills that will allow them to leverage technology to contribute meaningfully to South Africa’s innovation system.</p>
+    </div>
+    <section>
+      <!--Button 1 DIV-->
+      <div id="Image_Page1">
+        <!--Row1 Pictures-->
+        <img src="images/Portfolio/AboutCode4CT_image.jpg" alt="" style="width:20%; height:200px">
+        <img src="images/Portfolio/port_image1 (2).jpg" alt="" style="width:20%; height:200px">
+        <img src="images/Portfolio/portfolio_image1.jpg" alt="" style="width:30%; height:200px">
+        <img src="images/Portfolio/port_image1 (3).jpg" alt="" style="width:20%; height:200px">
+        <!--Row2 Pictures-->
+        <img src="images/Portfolio/portfolio_image2.jpg" alt="" style="width:20%; height:200px">
+        <img src="images/Portfolio/portfolio_image3.jpg" alt="" style="width:30%; height:200px">
+        <img src="images/Portfolio/portfolio_image4.jpg" alt="" style="width:20%; height:200px">
+        <img src="images/Portfolio/portfolio_image5.jpg" alt="" style="width:20%; height:200px">
+        <!--Row3 Pictures-->
+        <img src="images/Portfolio/portfolio_image6.jpg" alt="" style="width:20%; height:200px">
+        <img src="images/Portfolio/portfolio_image7.jpg" alt="" style="width:20%; height:200px">
+        <img src="images/Portfolio/portfolio_image8.jpg" alt="" style="width:30%; height:200px">
+        <img src="images/Portfolio/portfolio_image9.jpg" alt="" style="width:20%; height:200px">
+      </div>
+      <!--Button 2 DIV-->
+      <div id="Image_Page2">
+        <!--Row1 Pictures-->
+        <img src="images/Portfolio/portfolio_image10.jpg" alt="" style="width:20%; height:200px">
+        <img src="images/Portfolio/portfolio_image11.jpg" alt="" style="width:30%; height:200px">
+        <img src="images/Portfolio/portfolio_image12.jpg" alt="" style="width:20%; height:200px">
+        <img src="images/Portfolio/portfolio_image13.jpg" alt="" style="width:20%; height:200px">
+        <!--Row2 Pictures-->
+        <img src="images/Portfolio/portfolio_image14.jpg" alt="" style="width:20%; height:200px">
+        <img src="images/Portfolio/portfolio_image15.jpg" alt="" style="width:20%; height:200px">
+        <img src="images/Portfolio/portfolio_image16.jpg" alt="" style="width:30%; height:200px">
+        <img src="images/Portfolio/portfolio-image17.jpg" alt="" style="width:20%; height:200px">
+        <!--Row3 Pictures-->
+        <img src="images/Portfolio/portfolio_image18.jpg" alt="" style="width:20%; height:200px">
+        <img src="images/Portfolio/portfolio_image19.jpg" alt="" style="width:30%; height:200px">
+        <img src="images/Portfolio/portfolio_image20.jpg" alt="" style="width:20%; height:200px">
+        <img src="images/Portfolio/portfolio_image21.jpg" alt="" style="width:20%; height:200px">
+      </div>
+
+    </section>
+    <div style="text-align: center">
+      <button id="button1">1</button>
+      <button id="button2">2</button>
+    </div>
+    <br><br>
+    <div id="Logo_Carousel">
+      <div id='carousel_container'>
+        <div id='carousel_inner'>
+          <ul id='carousel_ul'>
+            <!--CSG Logo-->
+            <li><img src="images/logo/csg_logo.jpg" alt="CSG" style="width: 80%; height: 150px"></li>
+            <!--Lwandle Logo-->
+            <li><img src="images/logo/lwandlelogo..jpg" alt="" style="width: 80%; height: 150px"></li>
+            <!--Mazars Logo-->
+            <li><img src="images/logo/mazars-logo..jpg" alt="" style="width: 80%; height: 150px"></li>
+            <!--Mobenzi Logo-->
+            <li><img src="images/logo/Mobenzi_Logo..jpg" alt="" style="width: 80%; height: 150px"></li>
+            <!--Open Box Logo-->
+            <li><img src="images/logo/openboxlogo..jpg" alt="" style="width: 80%; height: 150px"></li>
+            <!--Take A Lot Logo-->
+            <li><img src="images/logo/Takealot-logo..jpg" alt="" style="width: 80%; height: 150px"></li>
+            <!--TNS Logo-->
+            <li><img src="images/logo/TNS-logo..jpg" alt="" style="width: 80%; height: 150px"></li>
+            <!--Google Logo-->
+            <li><img src="images/logo/google.jpg" alt="" style="width: 80%; height: 150px"></li>
+            <!--Where is my Trasnport Logo-->
+            <li><img src="images/logo/Where-Is-My-Transport.png" alt="" style="width: 80%; height: 150px"></li>
+            <!--Saratoga Logo-->
+            <li><img src="images/logo/Saratoga-Logo.png" alt="" style="width: 80%; height: 150px"></li>
+            <!--Amazon Logo-->
+            <li><img src="images/logo/amazon.png" alt="" style="width: 80%; height: 150px"></li>
+            <!--DG Murray Trust Logo-->
+            <li><img src="images/logo/DGMurrayTrust.png" alt="" style="width: 80%; height: 150px"></li>
+            <!--WeTech Logo-->
+            <li><img src="images/logo/WeTech.png" alt="" style="width: 80%; height: 150px"></li>
+            <!--Automattic Logo-->
+            <li><img src="images/logo/Automattic-Logo.png" alt="" style="width: 80%; height: 150px"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+
+    <!--Footer of my Page-->
+    <footer>
+
+      <div>
+        <h2>Legal</h2>
+          <p>Code for Cape Town is a project of Innovate South Africa, which is a registered non-profit (137806NPO) and a Public Beneficiary Organisation (930050338)</p>
+      </div>
+
+      <div>
+        <h2>Company</h2>
+          <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="http://code4ct.com/blog/">Blog</a></li>
+          </ul>
+      </div>
+
+      <!--Contact Details on Footer-->
+      <div id="contact">
+        <h2>Contact</h2>
+          <li><i class="fa fa-phone-square" style="font-size:24px"></i> &nbsp; &nbsp;+(27)021 685 0991</li>
+          <li><i class="fa fa-envelope-o" style="font-size:24px"></i> &nbsp; &nbsp;info@code4ct.com</li>
+          <li>&nbsp;<i class="fa fa-map-marker" style="font-size:24px"></i> &nbsp;Physical address: Innovate South Africa, 403 Old Castle Brewery, 6 Beach Rd, Woodstock, Cape Town, 7915 </li>
+      </div>
+    </footer>
+    <!--Copyright Footer-->
+    <div id="footer">
+      <span>Copright 2017 PRIVATE POLICY</span>
+        <ul>
+          <li>Follow us:</li>
+          <li><a href="https://www.facebook.com/code4ct/"><i class="fa fa-facebook"></i></a><li>
+          <li><a href="https://twitter.com/@code4ct"><i class="fa fa-twitter"></i></a><li>
+          <li><a href="https://www.linkedin.com/company/9414552/"><i class="fa fa-linkedin"></i></a><li>
+        </ul>
+    </div>
+  </body>
+  <script src="js/floatCarousel.js"></script>
+  <script type="text/javascript">
+  // Hiding of Div2 When refreshing the page
+  $('#Image_Page2').hide();
+  //when i Press Button2, Hide div1 and show div2
+  $('#button2').click(function(){
+    $('#Image_Page1').hide();
+    $('#Image_Page2').show();
+  });
+  //When Press button 1, Hide div2 and show div1
+  $('#button1').click(function(){
+    $('#Image_Page2').hide();
+    $('#Image_Page1').show();
+  });
+
+
+// jquery Zoom in and Zoom out
+
+  </script>
+</html>

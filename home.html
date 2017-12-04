@@ -1,0 +1,2734 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home | Code4CT</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Poppins" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="images/logo/code4ct-logo.jpg" type="image/jpg">
+
+    <style>
+    /*Code4CT_Stylesheet*/
+
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    /*Top Section of the Page*/
+
+    /*NavBar Styling*/
+    #TopBar {
+      opacity: 1;
+      background-color: white;
+      background-blend-mode: normal;
+      width: 100%;
+      height: 80px;
+      position: fixed;
+    }
+
+    #TopBar img {
+      float: left;
+      width: 15%;
+      margin-left: 30px;
+    }
+    nav {
+        float: left;
+        width: 35%;
+        text-align: center;
+        margin-left: 280px;
+    }
+    nav li {
+        display: inline;
+        font-style: normal;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+        color: #4d4d4d;
+        list-style-type: none;
+        padding: 10px;
+        margin-left: 10px;
+    }
+    nav a {
+        text-decoration: none;
+        color: gray;
+    }
+    nav li a:hover {
+      color: red;
+    }
+    nav li a:active {
+      color: red;
+    }
+
+    /*End of NavBar Styling*/
+
+    #search-field {
+        float: 35%;
+        margin-left: 990px;
+        padding: 21px;
+    }
+    #search-field input {
+      border: 2px solid lightgrey;
+      border-radius: 10%;
+    }
+    #search-field button {
+      border: 2px solid lightgrey;
+      border-radius: 10%;
+      background-color: white;
+      font-size: 13px;
+      color: #ff4d4d;
+    }
+    /*End of Top Section of the Page*/
+    /*Background Images Slideshow*/
+    #slider, .container, .slide_content {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      width: 100%;
+      height: 400px;
+      overflow-x: hidden;
+    }
+    .container {
+      position: relative;
+    }
+    .slide {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    /*SlideShow images inside Images folder on css folder*/
+    .slide1 {
+      background-image: url('images/home/slideshow_image1.jpg');
+    }
+    .slide2 {
+      background-image: url('images/home/slideshow_image2.jpg');
+    }
+    .slide3 {
+      background-image: url('images/home/slideshow_image3.jpg');
+    }
+    .slide_content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .slide_content span {
+      text-align: center;
+      opacity: 1;
+    }
+    .arrow {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      margin-top: -50px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      z-index: 100;
+    }
+
+    /*Previous Arrow*/
+    #arrow-left {
+      float: left;
+      border-width: 60px 80px 60px 0;
+      border-color: transparent white transparent transparent;
+      left: 0;
+      margin-left: 30px;
+      z-index: 100;
+    }
+    /*Next Arrow*/
+    #arrow-right {
+      float: left;
+      border-width: 30px 40px 30px 40px;
+      border-color: transparent white transparent transparent;
+      left: 0;
+      margin-right: 30px;
+      z-index: 100;
+    }
+    /*End of Background Images Slideshow*/
+
+    /*End of Background SlideShow*/
+    /*Creative Work Plan For Business Styling*/
+    #wrapper {
+      opacity: 1;
+      color: white;
+      width: 100%;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+    }
+    #wrapper h1 {
+      padding-bottom: 20px;
+      letter-spacing: 2px;
+      word-spacing: 5px;
+      font-size: 35px;
+    }
+    #wrapper p {
+      margin-bottom: 50px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 12px;
+    }
+    #wrapper button {
+      font-weight: bold;
+      border-radius: 5%;
+      color: white;
+      width: 150px;
+      height: 40px;
+    }
+    #wrapper button:hover {
+      font-weight: bold;
+      border-radius: 5%;
+      color: white;
+      width: 225px;
+      height: 60px;
+    }
+    /*Read More Button*/
+    #read-more-button {
+      border: 2px solid #ff4d4d;
+      background-color: #ff4d4d;
+    }
+    #read-more-button:hover {
+      border: 2px solid #ff4d4d;
+      background-color: #ff4d4d;
+    }
+    /*Donation Button*/
+    #donation-button {
+      margin-bottom: 70px;
+      border: 2px solid white;
+      background-color: #333333;
+    }
+    #donation-button:hover {
+      margin-bottom: 70px;
+      border: 2px solid white;
+      background-color: #333333;
+    }
+    /*End of Creatuve Work Plan For Business Styling*/
+    /*Who We Are Section Styling*/
+    section {
+      float: left;
+      background-color: white;
+      width: 100%;
+
+    }
+    /*Who Are We Information(ABOUT)*/
+    #About_Caption {
+      margin-top: 10px;
+      border: 1px solid white;
+      background-color: white;
+      font-family: 'Lato', sans-serif;
+      color: black;
+      width: 600px;
+      float: left;
+    }
+    #About_Caption h2 {
+      color: #333333;
+      margin: 40px;
+      word-spacing: 5px;
+      letter-spacing: 1px;
+    }
+    #About_Caption hr {
+      width: 60px;
+      height: 2px;
+      font-weight: bold;
+      float: left;
+      margin-left: 40px;
+      background-color: #ff4d4d;
+      border: 1px solid #ff4d4d;
+    }
+    #About_Caption p {
+      text-align: justify;
+      margin: 15px;
+      font-family: 'Lato', sans-serif;
+    }
+    #About_Caption button {
+      font-weight: bold;
+      border: 1px solid lightgrey;
+      border-radius: 5%;
+      color: grey;
+      font-size: 15px;
+      width: 150px;
+      height: 40px;
+      margin-top: 10px;
+      margin-left: 30px;
+    }
+    #About_Caption button:hover {
+      width: 225px;
+      font-weight: bold;
+      border: 1px solid lightgrey;
+      height: 60px;
+      font-size: 22px;
+      color: grey;
+      border-radius: 10%;
+    }
+
+    /*Who Are We Images Styling*/
+    #About_Images {
+      margin-top: 50px;
+      background-color: white;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: repeat(2, 1fr);
+      grid-row-gap: 30px;
+      border: 1px solid white;
+      color: black;
+      width: 700px;
+      float: right;
+    }
+
+    #About_Images > div p {
+      font-family: 'Poppins', sans-serif;
+      margin-left: 60px;
+    }
+    /*End of Who We Are Section Styling*/
+
+    /*Icons(CODING, COMMUNICATION, and PROBLEM_SOLVING)*/
+    #About_Course {
+      width: 100%;
+      background-color: black;
+      height: 370px;
+      float: left;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-row-gap: 2px;
+      color: white;
+      margin: 0;
+    }
+
+    #About_Course div {
+      padding-top: 20px;
+      width: 100%;
+      margin: 0;
+      display: inline;
+      height: 180px;
+    }
+
+    #About_Course h2 {
+      font-family: 'Lato', sans-serif;
+      padding-top: 20px;
+      text-align: center;
+    }
+
+    #About_Course p {
+      font-family: ':Lato', sans-serif;
+      text-align: justify;
+      margin-left: 20px;
+    }
+
+    #About_Course img {
+      margin-left: 140px;
+      margin-top: 10px;
+    }
+    /*End of Icons Section(CODING, COMMUNICATION, and PROBLEM_SOLVING)*/
+    /*Portfolio about CODE4CAPETWON*/
+    #Portfolio_Container {
+      width: 100%;
+      background-color: white;
+      font-family: 'Poppins', sans-serif;
+      color: black;
+    }
+
+    #Portfolio_Container hr {
+      width: 60px;
+      height: 2px;
+      font-weight: bold;
+      float: left;
+      margin-left: 40px;
+      margin-bottom: 20px;
+      background-color: #ff4d4d;
+      border: 1px solid #ff4d4d;
+    }
+
+    #Portfolio_Container h2 {
+      margin: 20px;
+    }
+
+    #Portfolio_Container p {
+      padding: 20px;
+    }
+
+    #grid {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #grid > div {
+      margin-left: 5px;
+      font-size: 5vw;
+    }
+
+
+    #grid_container {
+      grid-column: 3;
+      grid-row: 1 / span 2;
+    }
+
+    /*Code4CapeTown Team Images & Details using Grid*/
+    #team_container {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+      color: grey;
+    }
+
+    #team_container img {
+      float:left;
+      width: 55%;
+    }
+    #team_container p {
+      float: left;
+      width: 45%;
+    }
+
+    #team_container i {
+      padding-left: 10px;
+    }
+
+    #team_container i:hover {
+      color: #ff4d4d;
+    }
+    .icons {
+      margin-left: 300px;
+    }
+    /*End of Code4CapeTown Team Images & Details Section Styling*/
+    /*End of Code4CapeTown Portfolio*/
+
+    /*Statistics for Clients Section Counting*/
+    #Statistics_container {
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+      background-color: #4d4d4d;
+      height: 200px;
+    }
+
+    #Statistics_container > div {
+      margin-top: 30px;
+      background-color: #4d4d4d;
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+      color: white;
+    }
+
+    #Statistics_container hr {
+      width: 40px;
+      height: 2px;
+      font-weight: bold;
+      float: left;
+      margin-left: 40px;
+      margin-bottom: 20px;
+      background-color: #ff4d4d;
+      border: 1px solid #ff4d4d;
+    }
+
+    #Statistics_container p {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    /*End of Statistics Counting for Clients satsifaction*/
+    /*input field email to subscribe*/
+    #Email_container {
+      background-color: white;
+      color: black;
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    #Email_container h2 {
+      padding-top: 30px;
+    }
+    #Email_container input {
+      border: 1px solid white;
+      width: 300px;
+    }
+
+    #Email_container input::placeholder {
+      font-family: 'Poppins', sans-serif;
+      color: grey;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    #Email_container button {
+      background-color: #ff4d4d;
+      border: 1px solid #ff4d4d;
+      border-radius: 5%;
+      color: white;
+      font-size: 18px;
+      width: 80px;
+      padding-top: 10px;
+    }
+    /*End of Email to Suscribe to  Code4CapeTown*/
+
+    /*Sponsors Logo SLideshow*/
+    /*Logo Sliding(Carousel)*/
+    /*Carousel*/
+    #Logo_Carousel {
+      width: 100%;
+      height: 200px;
+      background-color: black;
+    }
+    #carousel_inner {
+      float: left;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      background: black;
+    }
+
+    #carousel_ul li img {
+      width: 100%;
+      height: 200px;
+    }
+
+    #carousel_ul {
+      position: relative;
+      left: -210px;
+      list-style-type: none;
+      margin: 0px;
+      padding: 0px;
+      width: 200%;
+      padding-bottom: 10px;
+    }
+
+    #carousel_ul li {
+      /*float: left;
+      width: 200px;
+      padding: 0px;
+      height: 110px;
+      background: #000000;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: 5px;
+      margin-right: 5px;*/
+    }
+
+    #carousel_ul li img {
+      /*margin-bottom: -4px;
+      cursor: pointer;
+      cursor: hand;
+      border: 0px;*/
+    }
+
+    #left_scroll, #right_scroll {
+      float: left;
+      height: 130px;
+      width: 35px;
+      margin-top: 50px;
+      margin-left: 20px;
+    }
+
+    #left_scroll img, #right_scroll img {
+      border: 0;
+      cursor: pointer;
+      cursor: hand;
+    }
+
+    #left_scroll img {
+      width: 25px;
+      height: 25px;
+    }
+
+    #right_scroll img {
+      width: 25px;
+      height: 25px;
+    }
+
+    /*End of Sponsors Logo SLideshow*/
+
+    /*Footer Styling*/
+    footer {
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 5px;
+      background-color: white;
+    }
+
+    footer > div {
+      background-color: white;
+      padding: 10px;
+    }
+
+    footer h2 {
+      font-family: 'Poppins', sans-serif;
+      color: #4d4d4d;
+      margin-left: 20px;
+    }
+
+    footer p {
+      margin-left: 5px;
+      text-align: justify;
+      font-family: 'Poppins', sans-serif;
+      color: #4d4d4d;
+    }
+
+    footer ul {
+      list-style-type: square;
+      margin-left: 10px;
+      text-align: justify;
+      font-family: 'Poppins', sans-serif;
+      color: #4d4d4d;
+    }
+
+    footer li a {
+      text-decoration: none;
+      color: #4d4d4d;
+    }
+
+    footer ul li:hover {
+      color: #ff4d4d;
+    }
+
+    footer i {
+      color: #4d4d4d;
+    }
+
+    footer i:hover {
+      color: #ff4d4d;
+    }
+
+    #contact {
+      list-style-type: none;
+      font-family: 'Poppins', sans-serif;
+      color: #4d4d4d;
+      text-align: justify;
+    }
+    /*Copright footer section*/
+    #footer {
+      width: 100%;
+      height: 50px;
+      background-color: #ff4d4d;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    #footer span {
+      float: left;
+      width: 50%;
+      margin-top: 10px;
+    }
+    #footer ul {
+      float: left;
+      width: 45%;
+      margin-left: 20px;
+    }
+    #footer ul li {
+      display: inline;
+      margin-left: 3px;
+    }
+    #footer li a {
+      font-style: normal;
+      color: white;
+      text-decoration: none;
+    }
+    /*End of Footer Styling*/
+
+    /* -----------iPad ----------- */
+
+    /* Portrait and Landscape */
+    @media
+          (min-device-width: 768px)
+      and (max-device-width: 1204px) {
+        /*Code4CT_Stylesheet*/
+
+        body {
+          width: 100%;
+          overflow-x: hidden;
+        }
+        /*Top Section of the Page*/
+
+        /*NavBar Styling*/
+        #TopBar {
+          opacity: 1;
+          background-color: white;
+          background-blend-mode: normal;
+          width: 100%;
+          height: 80px;
+          position: fixed;
+        }
+
+        #TopBar img {
+          float: left;
+          width: 15%;
+          margin-left: 30px;
+        }
+        nav {
+            float: left;
+            width: 35%;
+            text-align: center;
+            margin-left: 280px;
+        }
+        nav li {
+            display: inline;
+            font-style: normal;
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            color: #4d4d4d;
+            list-style-type: none;
+            padding: 10px;
+            margin-left: 10px;
+        }
+        nav a {
+            text-decoration: none;
+            color: gray;
+        }
+        nav li a:hover {
+          color: red;
+        }
+        nav li a:active {
+          color: red;
+        }
+
+        /*End of NavBar Styling*/
+
+        #search-field {
+            float: 35%;
+            margin-left: 990px;
+            padding: 21px;
+        }
+        #search-field input {
+          border: 2px solid lightgrey;
+          border-radius: 10%;
+        }
+        #search-field button {
+          border: 2px solid lightgrey;
+          border-radius: 10%;
+          background-color: white;
+          font-size: 13px;
+          color: #ff4d4d;
+        }
+        /*End of Top Section of the Page*/
+
+        /*End of Background SlideShow*/
+        /*Creative Work Plan For Business Styling*/
+        #wrapper {
+          opacity: 1;
+          color: white;
+          width: 100%;
+          font-family: 'Poppins', sans-serif;
+          text-align: center;
+        }
+        #wrapper h1 {
+          padding-bottom: 20px;
+          letter-spacing: 2px;
+          word-spacing: 5px;
+          font-size: 35px;
+        }
+        #wrapper p {
+          margin-bottom: 50px;
+          font-family: 'Poppins', sans-serif;
+          font-size: 12px;
+        }
+        #wrapper button {
+          font-weight: bold;
+          border-radius: 5%;
+          color: white;
+          width: 150px;
+          height: 40px;
+        }
+        #wrapper button:hover {
+          font-weight: bold;
+          border-radius: 5%;
+          color: white;
+          width: 225px;
+          height: 60px;
+        }
+        /*Read More Button*/
+        #read-more-button {
+          border: 2px solid #ff4d4d;
+          background-color: #ff4d4d;
+        }
+        #read-more-button:hover {
+          border: 2px solid #ff4d4d;
+          background-color: #ff4d4d;
+        }
+        /*Donation Button*/
+        #donation-button {
+          margin-bottom: 70px;
+          border: 2px solid white;
+          background-color: #333333;
+        }
+        #donation-button:hover {
+          margin-bottom: 70px;
+          border: 2px solid white;
+          background-color: #333333;
+        }
+        /*End of Creatuve Work Plan For Business Styling*/
+        /*Who We Are Section Styling*/
+        section {
+          float: left;
+          background-color: white;
+          width: 100%;
+
+        }
+        /*Who Are We Information(ABOUT)*/
+        #About_Caption {
+          margin-top: 10px;
+          border: 1px solid white;
+          background-color: white;
+          font-family: 'Lato', sans-serif;
+          color: black;
+          width: 600px;
+          float: left;
+        }
+        #About_Caption h2 {
+          color: #333333;
+          margin: 40px;
+          word-spacing: 5px;
+          letter-spacing: 1px;
+        }
+        #About_Caption hr {
+          width: 60px;
+          height: 2px;
+          font-weight: bold;
+          float: left;
+          margin-left: 40px;
+          background-color: #ff4d4d;
+          border: 1px solid #ff4d4d;
+        }
+        #About_Caption p {
+          text-align: justify;
+          margin: 15px;
+          font-family: 'Lato', sans-serif;
+        }
+        #About_Caption button {
+          font-weight: bold;
+          border: 1px solid lightgrey;
+          border-radius: 5%;
+          color: grey;
+          font-size: 15px;
+          width: 150px;
+          height: 40px;
+          margin-top: 10px;
+          margin-left: 30px;
+        }
+        #About_Caption button:hover {
+          width: 225px;
+          font-weight: bold;
+          border: 1px solid lightgrey;
+          height: 60px;
+          font-size: 22px;
+          color: grey;
+          border-radius: 10%;
+        }
+
+        /*Who Are We Images Styling*/
+        #About_Images {
+          margin-top: 50px;
+          background-color: white;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-auto-rows: repeat(2, 1fr);
+          grid-row-gap: 30px;
+          border: 1px solid white;
+          color: black;
+          width: 700px;
+          float: right;
+        }
+
+        #About_Images > div p {
+          font-family: 'Poppins', sans-serif;
+          margin-left: 60px;
+        }
+        /*End of Who We Are Section Styling*/
+
+        /*Icons(CODING, COMMUNICATION, and PROBLEM_SOLVING)*/
+        #About_Course {
+          width: 100%;
+          background-color: black;
+          height: 370px;
+          float: left;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-row-gap: 2px;
+          color: white;
+          margin: 0;
+        }
+
+        #About_Course div {
+          padding-top: 20px;
+          width: 100%;
+          margin: 0;
+          display: inline;
+          height: 180px;
+        }
+
+        #About_Course h2 {
+          font-family: 'Lato', sans-serif;
+          padding-top: 20px;
+          text-align: center;
+        }
+
+        #About_Course p {
+          font-family: ':Lato', sans-serif;
+          text-align: justify;
+          margin-left: 20px;
+        }
+
+        #About_Course img {
+          margin-left: 140px;
+          margin-top: 10px;
+        }
+        /*End of Icons Section(CODING, COMMUNICATION, and PROBLEM_SOLVING)*/
+        /*Portfolio about CODE4CAPETWON*/
+        #Portfolio_Container {
+          width: 100%;
+          background-color: white;
+          font-family: 'Poppins', sans-serif;
+          color: black;
+        }
+
+        #Portfolio_Container hr {
+          width: 60px;
+          height: 2px;
+          font-weight: bold;
+          float: left;
+          margin-left: 40px;
+          margin-bottom: 20px;
+          background-color: #ff4d4d;
+          border: 1px solid #ff4d4d;
+        }
+
+        #Portfolio_Container h2 {
+          margin: 20px;
+        }
+
+        #Portfolio_Container p {
+          padding: 20px;
+        }
+
+        #grid {
+          display: grid;
+          grid-template-rows: 1fr 1fr;
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        #grid > div {
+          margin-left: 5px;
+          font-size: 5vw;
+        }
+
+
+        #grid_container {
+          grid-column: 3;
+          grid-row: 1 / span 2;
+        }
+
+        /*Code4CapeTown Team Images & Details using Grid*/
+        #team_container {
+          display: grid;
+          grid-template-rows: 1fr 1fr;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 10px;
+          color: grey;
+        }
+
+        #team_container img {
+          float:left;
+          width: 55%;
+        }
+        #team_container p {
+          float: left;
+          width: 45%;
+        }
+
+        #team_container i {
+          padding-left: 10px;
+        }
+
+        #team_container i:hover {
+          color: #ff4d4d;
+        }
+        .icons {
+          margin-left: 300px;
+        }
+        /*End of Code4CapeTown Team Images & Details Section Styling*/
+        /*End of Code4CapeTown Portfolio*/
+
+        /*Statistics for Clients Section Counting*/
+        #Statistics_container {
+          display: grid;
+          grid-template-rows: 1fr;
+          grid-template-columns: repeat(4, 1fr);
+          grid-gap: 10px;
+          background-color: #4d4d4d;
+          height: 200px;
+        }
+
+        #Statistics_container > div {
+          margin-top: 30px;
+          background-color: #4d4d4d;
+          font-family: 'Poppins', sans-serif;
+          font-weight: bold;
+          color: white;
+        }
+
+        #Statistics_container hr {
+          width: 40px;
+          height: 2px;
+          font-weight: bold;
+          float: left;
+          margin-left: 40px;
+          margin-bottom: 20px;
+          background-color: #ff4d4d;
+          border: 1px solid #ff4d4d;
+        }
+
+        #Statistics_container p {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        /*End of Statistics Counting for Clients satsifaction*/
+        /*input field email to subscribe*/
+        #Email_container {
+          background-color: white;
+          color: black;
+          font-family: 'Poppins', sans-serif;
+          font-weight: bold;
+          text-align: center;
+        }
+
+        #Email_container h2 {
+          padding-top: 30px;
+        }
+        #Email_container input {
+          border: 1px solid white;
+          width: 300px;
+        }
+
+        #Email_container input::placeholder {
+          font-family: 'Poppins', sans-serif;
+          color: grey;
+          font-weight: bold;
+          font-size: 18px;
+        }
+
+        #Email_container button {
+          background-color: #ff4d4d;
+          border: 1px solid #ff4d4d;
+          border-radius: 5%;
+          color: white;
+          font-size: 18px;
+          width: 80px;
+          padding-top: 10px;
+        }
+        /*End of Email to Suscribe to  Code4CapeTown*/
+
+        /*Sponsors Logo SLideshow*/
+        /*Logo Sliding(Carousel)*/
+        /*Carousel*/
+        #Logo_Carousel {
+          width: 100%;
+          height: 200px;
+          background-color: black;
+        }
+        #carousel_inner {
+          float: left;
+          width: 100%;
+          height: 200px;
+          overflow: hidden;
+          background: black;
+        }
+
+        #carousel_ul li img {
+          width: 100%;
+          height: 200px;
+        }
+
+        #carousel_ul {
+          position: relative;
+          left: -210px;
+          list-style-type: none;
+          margin: 0px;
+          padding: 0px;
+          width: 200%;
+          padding-bottom: 10px;
+        }
+
+        #carousel_ul li {
+          float: left;
+          width: 200px;
+          padding: 0px;
+          height: 110px;
+          background: #000000;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+
+        #carousel_ul li img {
+          margin-bottom: -4px;
+          cursor: pointer;
+          cursor: hand;
+          border: 0px;
+        }
+
+        #left_scroll, #right_scroll {
+          float: left;
+          height: 130px;
+          width: 35px;
+          margin-top: 50px;
+          margin-left: 20px;
+        }
+
+        #left_scroll img, #right_scroll img {
+          border: 0;
+          cursor: pointer;
+          cursor: hand;
+        }
+
+        #left_scroll img {
+          width: 25px;
+          height: 25px;
+        }
+
+        #right_scroll img {
+          width: 25px;
+          height: 25px;
+        }
+
+        /*End of Sponsors Logo SLideshow*/
+
+        /*Footer Styling*/
+        footer {
+          display: grid;
+          grid-template-rows: 1fr;
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 5px;
+          background-color: white;
+        }
+
+        footer > div {
+          background-color: white;
+          padding: 10px;
+        }
+
+        footer h2 {
+          font-family: 'Poppins', sans-serif;
+          color: #4d4d4d;
+          margin-left: 20px;
+        }
+
+        footer p {
+          margin-left: 5px;
+          text-align: justify;
+          font-family: 'Poppins', sans-serif;
+          color: #4d4d4d;
+        }
+
+        footer ul {
+          list-style-type: square;
+          margin-left: 10px;
+          text-align: justify;
+          font-family: 'Poppins', sans-serif;
+          color: #4d4d4d;
+        }
+
+        footer li a {
+          text-decoration: none;
+          color: #4d4d4d;
+        }
+
+        footer ul li:hover {
+          color: #ff4d4d;
+        }
+
+        footer i {
+          color: #4d4d4d;
+        }
+
+        footer i:hover {
+          color: #ff4d4d;
+        }
+
+        #contact {
+          list-style-type: none;
+          font-family: 'Poppins', sans-serif;
+          color: #4d4d4d;
+          text-align: justify;
+        }
+        /*Copright footer section*/
+        #footer {
+          width: 100%;
+          height: 50px;
+          background-color: #ff4d4d;
+          color: white;
+          font-family: 'Poppins', sans-serif;
+        }
+
+        #footer span {
+          float: left;
+          width: 50%;
+          margin-top: 10px;
+        }
+        #footer ul {
+          float: left;
+          width: 45%;
+          margin-left: 20px;
+        }
+        #footer ul li {
+          display: inline;
+          margin-left: 3px;
+        }
+        #footer li a {
+          font-style: normal;
+          color: white;
+          text-decoration: none;
+        }
+        /*End of Footer Styling*/
+    }
+
+    /* ----------- Galaxy S3 ----------- */
+
+    /* Portrait and Landscape */
+    @media screen
+      and (device-width: 320px)
+      and (device-height: 640px)
+      and (-webkit-device-pixel-ratio: 2) {
+        /*Code4CT_Stylesheet*/
+
+        body {
+          width: 100%;
+          overflow-x: hidden;
+        }
+        /*Top Section of the Page*/
+
+        /*NavBar Styling*/
+        #TopBar {
+          opacity: 1;
+          background-color: white;
+          background-blend-mode: normal;
+          width: 100%;
+          height: 80px;
+          position: fixed;
+        }
+
+        #TopBar img {
+          float: left;
+          width: 15%;
+          margin-left: 30px;
+        }
+        nav {
+            float: left;
+            width: 35%;
+            text-align: center;
+            margin-left: 280px;
+        }
+        nav li {
+            display: inline;
+            font-style: normal;
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            color: #4d4d4d;
+            list-style-type: none;
+            padding: 10px;
+            margin-left: 10px;
+        }
+        nav a {
+            text-decoration: none;
+            color: gray;
+        }
+        nav li a:hover {
+          color: red;
+        }
+        nav li a:active {
+          color: red;
+        }
+
+        /*End of NavBar Styling*/
+
+        #search-field {
+            float: 35%;
+            margin-left: 990px;
+            padding: 21px;
+        }
+        #search-field input {
+          border: 2px solid lightgrey;
+          border-radius: 10%;
+        }
+        #search-field button {
+          border: 2px solid lightgrey;
+          border-radius: 10%;
+          background-color: white;
+          font-size: 13px;
+          color: #ff4d4d;
+        }
+        /*End of Top Section of the Page*/
+
+        /*Creative Work Plan For Business Styling*/
+        #wrapper {
+          opacity: 1;
+          color: white;
+          width: 100%;
+          font-family: 'Poppins', sans-serif;
+          text-align: center;
+        }
+        #wrapper h1 {
+          padding-bottom: 20px;
+          letter-spacing: 2px;
+          word-spacing: 5px;
+          font-size: 35px;
+        }
+        #wrapper p {
+          margin-bottom: 50px;
+          font-family: 'Poppins', sans-serif;
+          font-size: 12px;
+        }
+        #wrapper button {
+          font-weight: bold;
+          border-radius: 5%;
+          color: white;
+          width: 150px;
+          height: 40px;
+        }
+        #wrapper button:hover {
+          font-weight: bold;
+          border-radius: 5%;
+          color: white;
+          width: 225px;
+          height: 60px;
+        }
+        /*Read More Button*/
+        #read-more-button {
+          border: 2px solid #ff4d4d;
+          background-color: #ff4d4d;
+        }
+        #read-more-button:hover {
+          border: 2px solid #ff4d4d;
+          background-color: #ff4d4d;
+        }
+        /*Donation Button*/
+        #donation-button {
+          margin-bottom: 70px;
+          border: 2px solid white;
+          background-color: #333333;
+        }
+        #donation-button:hover {
+          margin-bottom: 70px;
+          border: 2px solid white;
+          background-color: #333333;
+        }
+        /*End of Creatuve Work Plan For Business Styling*/
+        /*Who We Are Section Styling*/
+        section {
+          float: left;
+          background-color: white;
+          width: 100%;
+
+        }
+        /*Who Are We Information(ABOUT)*/
+        #About_Caption {
+          margin-top: 10px;
+          border: 1px solid white;
+          background-color: white;
+          font-family: 'Lato', sans-serif;
+          color: black;
+          width: 600px;
+          float: left;
+        }
+        #About_Caption h2 {
+          color: #333333;
+          margin: 40px;
+          word-spacing: 5px;
+          letter-spacing: 1px;
+        }
+        #About_Caption hr {
+          width: 60px;
+          height: 2px;
+          font-weight: bold;
+          float: left;
+          margin-left: 40px;
+          background-color: #ff4d4d;
+          border: 1px solid #ff4d4d;
+        }
+        #About_Caption p {
+          text-align: justify;
+          margin: 15px;
+          font-family: 'Lato', sans-serif;
+        }
+        #About_Caption button {
+          font-weight: bold;
+          border: 1px solid lightgrey;
+          border-radius: 5%;
+          color: grey;
+          font-size: 15px;
+          width: 150px;
+          height: 40px;
+          margin-top: 10px;
+          margin-left: 30px;
+        }
+        #About_Caption button:hover {
+          width: 225px;
+          font-weight: bold;
+          border: 1px solid lightgrey;
+          height: 60px;
+          font-size: 22px;
+          color: grey;
+          border-radius: 10%;
+        }
+
+        /*Who Are We Images Styling*/
+        #About_Images {
+          margin-top: 50px;
+          background-color: white;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-auto-rows: repeat(2, 1fr);
+          grid-row-gap: 30px;
+          border: 1px solid white;
+          color: black;
+          width: 700px;
+          float: right;
+        }
+
+        #About_Images > div p {
+          font-family: 'Poppins', sans-serif;
+          margin-left: 60px;
+        }
+        /*End of Who We Are Section Styling*/
+
+        /*Icons(CODING, COMMUNICATION, and PROBLEM_SOLVING)*/
+        #About_Course {
+          width: 100%;
+          background-color: black;
+          height: 370px;
+          float: left;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-row-gap: 2px;
+          color: white;
+          margin: 0;
+        }
+
+        #About_Course div {
+          padding-top: 20px;
+          width: 100%;
+          margin: 0;
+          display: inline;
+          height: 180px;
+        }
+
+        #About_Course h2 {
+          font-family: 'Lato', sans-serif;
+          padding-top: 20px;
+          text-align: center;
+        }
+
+        #About_Course p {
+          font-family: ':Lato', sans-serif;
+          text-align: justify;
+          margin-left: 20px;
+        }
+
+        #About_Course img {
+          margin-left: 140px;
+          margin-top: 10px;
+        }
+        /*End of Icons Section(CODING, COMMUNICATION, and PROBLEM_SOLVING)*/
+        /*Portfolio about CODE4CAPETWON*/
+        #Portfolio_Container {
+          width: 100%;
+          background-color: white;
+          font-family: 'Poppins', sans-serif;
+          color: black;
+        }
+
+        #Portfolio_Container hr {
+          width: 60px;
+          height: 2px;
+          font-weight: bold;
+          float: left;
+          margin-left: 40px;
+          margin-bottom: 20px;
+          background-color: #ff4d4d;
+          border: 1px solid #ff4d4d;
+        }
+
+        #Portfolio_Container h2 {
+          margin: 20px;
+        }
+
+        #Portfolio_Container p {
+          padding: 20px;
+        }
+
+        #grid {
+          display: grid;
+          grid-template-rows: 1fr 1fr;
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        #grid > div {
+          margin-left: 5px;
+          font-size: 5vw;
+        }
+
+
+        #grid_container {
+          grid-column: 3;
+          grid-row: 1 / span 2;
+        }
+
+        /*Code4CapeTown Team Images & Details using Grid*/
+        #team_container {
+          display: grid;
+          grid-template-rows: 1fr 1fr;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 10px;
+          color: grey;
+        }
+
+        #team_container img {
+          float:left;
+          width: 55%;
+        }
+        #team_container p {
+          float: left;
+          width: 45%;
+        }
+
+        #team_container i {
+          padding-left: 10px;
+        }
+
+        #team_container i:hover {
+          color: #ff4d4d;
+        }
+        .icons {
+          margin-left: 300px;
+        }
+        /*End of Code4CapeTown Team Images & Details Section Styling*/
+        /*End of Code4CapeTown Portfolio*/
+
+        /*Statistics for Clients Section Counting*/
+        #Statistics_container {
+          display: grid;
+          grid-template-rows: 1fr;
+          grid-template-columns: repeat(4, 1fr);
+          grid-gap: 10px;
+          background-color: #4d4d4d;
+          height: 200px;
+        }
+
+        #Statistics_container > div {
+          margin-top: 30px;
+          background-color: #4d4d4d;
+          font-family: 'Poppins', sans-serif;
+          font-weight: bold;
+          color: white;
+        }
+
+        #Statistics_container hr {
+          width: 40px;
+          height: 2px;
+          font-weight: bold;
+          float: left;
+          margin-left: 40px;
+          margin-bottom: 20px;
+          background-color: #ff4d4d;
+          border: 1px solid #ff4d4d;
+        }
+
+        #Statistics_container p {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        /*End of Statistics Counting for Clients satsifaction*/
+        /*input field email to subscribe*/
+        #Email_container {
+          background-color: white;
+          color: black;
+          font-family: 'Poppins', sans-serif;
+          font-weight: bold;
+          text-align: center;
+        }
+
+        #Email_container h2 {
+          padding-top: 30px;
+        }
+        #Email_container input {
+          border: 1px solid white;
+          width: 300px;
+        }
+
+        #Email_container input::placeholder {
+          font-family: 'Poppins', sans-serif;
+          color: grey;
+          font-weight: bold;
+          font-size: 18px;
+        }
+
+        #Email_container button {
+          background-color: #ff4d4d;
+          border: 1px solid #ff4d4d;
+          border-radius: 5%;
+          color: white;
+          font-size: 18px;
+          width: 80px;
+          padding-top: 10px;
+        }
+        /*End of Email to Suscribe to  Code4CapeTown*/
+
+        /*Sponsors Logo SLideshow*/
+        /*Logo Sliding(Carousel)*/
+        /*Carousel*/
+        #Logo_Carousel {
+          width: 100%;
+          height: 200px;
+          background-color: black;
+        }
+        #carousel_inner {
+          float: left;
+          width: 100%;
+          height: 200px;
+          overflow: hidden;
+          background: black;
+        }
+
+        #carousel_ul li img {
+          width: 100%;
+          height: 200px;
+        }
+
+        #carousel_ul {
+          position: relative;
+          left: -210px;
+          list-style-type: none;
+          margin: 0px;
+          padding: 0px;
+          width: 200%;
+          padding-bottom: 10px;
+        }
+
+        #carousel_ul li {
+          float: left;
+          width: 200px;
+          padding: 0px;
+          height: 110px;
+          background: #000000;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+
+        #carousel_ul li img {
+          margin-bottom: -4px;
+          cursor: pointer;
+          cursor: hand;
+          border: 0px;
+        }
+
+        #left_scroll, #right_scroll {
+          float: left;
+          height: 130px;
+          width: 35px;
+          margin-top: 50px;
+          margin-left: 20px;
+        }
+
+        #left_scroll img, #right_scroll img {
+          border: 0;
+          cursor: pointer;
+          cursor: hand;
+        }
+
+        #left_scroll img {
+          width: 25px;
+          height: 25px;
+        }
+
+        #right_scroll img {
+          width: 25px;
+          height: 25px;
+        }
+
+        /*End of Sponsors Logo SLideshow*/
+
+        /*Footer Styling*/
+        footer {
+          display: grid;
+          grid-template-rows: 1fr;
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 5px;
+          background-color: white;
+        }
+
+        footer > div {
+          background-color: white;
+          padding: 10px;
+        }
+
+        footer h2 {
+          font-family: 'Poppins', sans-serif;
+          color: #4d4d4d;
+          margin-left: 20px;
+        }
+
+        footer p {
+          margin-left: 5px;
+          text-align: justify;
+          font-family: 'Poppins', sans-serif;
+          color: #4d4d4d;
+        }
+
+        footer ul {
+          list-style-type: square;
+          margin-left: 10px;
+          text-align: justify;
+          font-family: 'Poppins', sans-serif;
+          color: #4d4d4d;
+        }
+
+        footer li a {
+          text-decoration: none;
+          color: #4d4d4d;
+        }
+
+        footer ul li:hover {
+          color: #ff4d4d;
+        }
+
+        footer i {
+          color: #4d4d4d;
+        }
+
+        footer i:hover {
+          color: #ff4d4d;
+        }
+
+        #contact {
+          list-style-type: none;
+          font-family: 'Poppins', sans-serif;
+          color: #4d4d4d;
+          text-align: justify;
+        }
+        /*Copright footer section*/
+        #footer {
+          width: 100%;
+          height: 50px;
+          background-color: #ff4d4d;
+          color: white;
+          font-family: 'Poppins', sans-serif;
+        }
+
+        #footer span {
+          float: left;
+          width: 50%;
+          margin-top: 10px;
+        }
+        #footer ul {
+          float: left;
+          width: 45%;
+          margin-left: 20px;
+        }
+        #footer ul li {
+          display: inline;
+          margin-left: 3px;
+        }
+        #footer li a {
+          font-style: normal;
+          color: white;
+          text-decoration: none;
+        }
+        /*End of Footer Styling*/
+    }
+
+    /* ----------- Non-Retina Screens ----------- */
+    @media screen
+      and (min-device-width: 1280px)
+      and (max-device-width: 1600px)
+      and (-webkit-min-device-pixel-ratio: 1) {
+        /*Code4CT_Stylesheet*/
+
+        body {
+          width: 100%;
+          overflow-x: hidden;
+        }
+        /*Top Section of the Page*/
+
+        /*NavBar Styling*/
+        #TopBar {
+          opacity: 1;
+          background-color: white;
+          background-blend-mode: normal;
+          width: 100%;
+          height: 80px;
+          position: fixed;
+        }
+
+        #TopBar img {
+          float: left;
+          width: 15%;
+          margin-left: 30px;
+        }
+        nav {
+            float: left;
+            width: 35%;
+            text-align: center;
+            margin-left: 280px;
+        }
+        nav li {
+            display: inline;
+            font-style: normal;
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+            font-size: 14px;
+            color: #4d4d4d;
+            list-style-type: none;
+            padding: 10px;
+            margin-left: 10px;
+        }
+        nav a {
+            text-decoration: none;
+            color: gray;
+        }
+        nav li a:hover {
+          color: red;
+        }
+        nav li a:active {
+          color: red;
+        }
+
+        /*End of NavBar Styling*/
+
+        #search-field {
+            float: 35%;
+            margin-left: 990px;
+            padding: 21px;
+        }
+        #search-field input {
+          border: 2px solid lightgrey;
+          border-radius: 10%;
+        }
+        #search-field button {
+          border: 2px solid lightgrey;
+          border-radius: 10%;
+          background-color: white;
+          font-size: 13px;
+          color: #ff4d4d;
+        }
+        /*End of Top Section of the Page*/
+        /*Background Images Slideshow*/
+        #slider, .container, .slide_content {
+          margin: 0;
+          padding: 0;
+          font-family: 'Poppins', sans-serif;
+          width: 100%;
+          height: 400px;
+          overflow-x: hidden;
+        }
+        .container {
+          position: relative;
+        }
+        .slide {
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+        /*SlideShow images inside Images folder on css folder*/
+        .slide1 {
+          background-image: url('images/home/slideshow_image1.jpg');
+        }
+        .slide2 {
+          background-image: url('images/home/slideshow_image2.jpg');
+        }
+        .slide3 {
+          background-image: url('images/home/slideshow_image3.jpg');
+        }
+        .slide_content {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+        .slide_content span {
+          text-align: center;
+          opacity: 1;
+        }
+        .arrow {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          margin-top: -50px;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          z-index: 100;
+        }
+
+        /*Previous Arrow*/
+        #arrow-left {
+          float: left;
+          border-width: 60px 80px 60px 0;
+          border-color: transparent white transparent transparent;
+          left: 0;
+          margin-left: 30px;
+          z-index: 100;
+        }
+        /*Next Arrow*/
+        #arrow-right {
+          float: left;
+          border-width: 30px 40px 30px 40px;
+          border-color: transparent white transparent transparent;
+          left: 0;
+          margin-right: 30px;
+          z-index: 100;
+        }
+        /*End of Background Images Slideshow*/
+
+        /*End of Background SlideShow*/
+        /*Creative Work Plan For Business Styling*/
+        #wrapper {
+          opacity: 1;
+          color: white;
+          width: 100%;
+          font-family: 'Poppins', sans-serif;
+          text-align: center;
+        }
+        #wrapper h1 {
+          padding-bottom: 20px;
+          letter-spacing: 2px;
+          word-spacing: 5px;
+          font-size: 35px;
+        }
+        #wrapper p {
+          margin-bottom: 50px;
+          font-family: 'Poppins', sans-serif;
+          font-size: 12px;
+        }
+        #wrapper button {
+          font-weight: bold;
+          border-radius: 5%;
+          color: white;
+          width: 150px;
+          height: 40px;
+        }
+        #wrapper button:hover {
+          font-weight: bold;
+          border-radius: 5%;
+          color: white;
+          width: 225px;
+          height: 60px;
+        }
+        /*Read More Button*/
+        #read-more-button {
+          border: 2px solid #ff4d4d;
+          background-color: #ff4d4d;
+        }
+        #read-more-button a {
+          text-decoration: none;
+          color: white;
+        }
+        #read-more-button:hover {
+          border: 2px solid #ff4d4d;
+          background-color: #ff4d4d;
+        }
+        /*Donation Button*/
+        #donation-button {
+          margin-bottom: 70px;
+          border: 2px solid white;
+          background-color: #333333;
+        }
+        #donation-button:hover {
+          margin-bottom: 70px;
+          border: 2px solid white;
+          background-color: #333333;
+        }
+        /*End of Creatuve Work Plan For Business Styling*/
+        /*Who We Are Section Styling*/
+        section {
+          float: left;
+          background-color: white;
+          width: 100%;
+
+        }
+        /*Who Are We Information(ABOUT)*/
+        #About_Caption {
+          margin-top: 10px;
+          border: 1px solid white;
+          background-color: white;
+          font-family: 'Lato', sans-serif;
+          color: black;
+          width: 600px;
+          float: left;
+        }
+        #About_Caption h2 {
+          color: #333333;
+          margin: 40px;
+          word-spacing: 5px;
+          letter-spacing: 1px;
+        }
+        #About_Caption hr {
+          width: 60px;
+          height: 2px;
+          font-weight: bold;
+          float: left;
+          margin-left: 40px;
+          background-color: #ff4d4d;
+          border: 1px solid #ff4d4d;
+        }
+        #About_Caption p {
+          text-align: justify;
+          margin: 15px;
+          font-family: 'Lato', sans-serif;
+        }
+        #About_Caption button {
+          font-weight: bold;
+          border: 1px solid lightgrey;
+          border-radius: 5%;
+          color: grey;
+          font-size: 15px;
+          width: 150px;
+          height: 40px;
+          margin-top: 10px;
+          margin-left: 30px;
+        }
+        #About_Caption button:hover {
+          width: 225px;
+          font-weight: bold;
+          border: 1px solid lightgrey;
+          height: 60px;
+          font-size: 22px;
+          color: grey;
+          border-radius: 10%;
+        }
+
+        /*Who Are We Images Styling*/
+        #About_Images {
+          margin-top: 50px;
+          background-color: white;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-auto-rows: repeat(2, 1fr);
+          grid-row-gap: 30px;
+          border: 1px solid white;
+          color: black;
+          width: 700px;
+          float: right;
+        }
+
+        #About_Images > div p {
+          font-family: 'Poppins', sans-serif;
+          margin-left: 60px;
+        }
+        /*End of Who We Are Section Styling*/
+
+        /*Icons(CODING, COMMUNICATION, and PROBLEM_SOLVING)*/
+        #About_Course {
+          width: 100%;
+          background-color: black;
+          height: 370px;
+          float: left;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-row-gap: 2px;
+          color: white;
+          margin: 0;
+        }
+
+        #About_Course div {
+          padding-top: 20px;
+          width: 100%;
+          margin: 0;
+          display: inline;
+          height: 180px;
+        }
+
+        #About_Course h2 {
+          font-family: 'Lato', sans-serif;
+          padding-top: 20px;
+          text-align: center;
+        }
+
+        #About_Course p {
+          font-family: ':Lato', sans-serif;
+          text-align: justify;
+          margin-left: 20px;
+        }
+
+        #About_Course img {
+          margin-left: 140px;
+          margin-top: 10px;
+        }
+        /*End of Icons Section(CODING, COMMUNICATION, and PROBLEM_SOLVING)*/
+        /*Portfolio about CODE4CAPETWON*/
+        #Portfolio_Container {
+          width: 100%;
+          background-color: white;
+          font-family: 'Poppins', sans-serif;
+          color: black;
+        }
+
+        #Portfolio_Container hr {
+          width: 60px;
+          height: 2px;
+          font-weight: bold;
+          float: left;
+          margin-left: 40px;
+          margin-bottom: 20px;
+          background-color: #ff4d4d;
+          border: 1px solid #ff4d4d;
+        }
+
+        #Portfolio_Container h2 {
+          margin: 20px;
+        }
+
+        #Portfolio_Container p {
+          padding: 20px;
+        }
+
+        #grid {
+          display: grid;
+          grid-template-rows: 1fr 1fr;
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        #grid > div {
+          margin-left: 5px;
+          font-size: 5vw;
+        }
+
+
+        #grid_container {
+          grid-column: 3;
+          grid-row: 1 / span 2;
+        }
+
+        /*Code4CapeTown Team Images & Details using Grid*/
+        #team_container {
+          display: grid;
+          grid-template-rows: 1fr 1fr;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 10px;
+          color: grey;
+        }
+
+        #team_container img {
+          float:left;
+          width: 55%;
+        }
+        #team_container p {
+          float: left;
+          width: 45%;
+        }
+
+        #team_container i {
+          padding-left: 10px;
+        }
+
+        #team_container i:hover {
+          color: #ff4d4d;
+        }
+        .icons {
+          margin-left: 300px;
+        }
+        /*End of Code4CapeTown Team Images & Details Section Styling*/
+        /*End of Code4CapeTown Portfolio*/
+
+        /*Statistics for Clients Section Counting*/
+        #Statistics_container {
+          display: grid;
+          grid-template-rows: 1fr;
+          grid-template-columns: repeat(4, 1fr);
+          grid-gap: 10px;
+          background-color: #4d4d4d;
+          height: 200px;
+        }
+
+        #Statistics_container > div {
+          margin-top: 30px;
+          background-color: #4d4d4d;
+          font-family: 'Poppins', sans-serif;
+          font-weight: bold;
+          color: white;
+        }
+
+        #Statistics_container hr {
+          width: 40px;
+          height: 2px;
+          font-weight: bold;
+          float: left;
+          margin-left: 40px;
+          margin-bottom: 20px;
+          background-color: #ff4d4d;
+          border: 1px solid #ff4d4d;
+        }
+
+        #Statistics_container p {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        /*End of Statistics Counting for Clients satsifaction*/
+        /*input field email to subscribe*/
+        #Email_container {
+          background-color: white;
+          color: black;
+          font-family: 'Poppins', sans-serif;
+          font-weight: bold;
+          text-align: center;
+        }
+
+        #Email_container h2 {
+          padding-top: 30px;
+        }
+        #Email_container input {
+          border: 1px solid white;
+          width: 300px;
+        }
+
+        #Email_container input::placeholder {
+          font-family: 'Poppins', sans-serif;
+          color: grey;
+          font-weight: bold;
+          font-size: 18px;
+        }
+
+        #Email_container button {
+          background-color: #ff4d4d;
+          border: 1px solid #ff4d4d;
+          border-radius: 5%;
+          color: white;
+          font-size: 18px;
+          width: 80px;
+          padding-top: 10px;
+        }
+        /*End of Email to Suscribe to  Code4CapeTown*/
+
+        /*Sponsors Logo SLideshow*/
+        /*Logo Sliding(Carousel)*/
+        /*Carousel*/
+        #Logo_Carousel {
+          width: 100%;
+          height: 200px;
+          background-color: black;
+        }
+        #carousel_inner {
+          float: left;
+          width: 100%;
+          height: 200px;
+          overflow: hidden;
+          background: black;
+        }
+
+        #carousel_ul li img {
+          width: 100%;
+          height: 200px;
+        }
+
+        #carousel_ul {
+          position: relative;
+          left: -210px;
+          list-style-type: none;
+          margin: 0px;
+          padding: 0px;
+          width: 200%;
+          /*padding-bottom: 10px;*/
+        }
+
+        #carousel_ul li {
+          float: left;
+          width: 200px;
+          padding: 0px;
+          height: 110px;
+          background: #000000;
+          /*margin-top: 10px;
+          margin-bottom: 10px;
+          margin-left: 5px;
+          margin-right: 5px;*/
+        }
+
+
+        #left_scroll, #right_scroll {
+          float: left;
+          height: 130px;
+          width: 35px;
+          /*margin-top: 50px;
+          margin-left: 20px;*/
+        }
+
+        #left_scroll img, #right_scroll img {
+          border: 0;
+          cursor: pointer;
+          cursor: hand;
+        }
+
+        #left_scroll img {
+          /*width: 25px;
+          height: 25px;*/
+        }
+
+        #right_scroll img {
+          /*width: 25px;
+          height: 25px;*/
+        }
+
+        /*End of Sponsors Logo SLideshow*/
+
+        /*Footer Styling*/
+        footer {
+          display: grid;
+          grid-template-rows: 1fr;
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 5px;
+          background-color: white;
+        }
+
+        footer > div {
+          background-color: white;
+          padding: 10px;
+        }
+
+        footer h2 {
+          font-family: 'Poppins', sans-serif;
+          color: #4d4d4d;
+          margin-left: 20px;
+        }
+
+        footer p {
+          margin-left: 5px;
+          text-align: justify;
+          font-family: 'Poppins', sans-serif;
+          color: #4d4d4d;
+        }
+
+        footer ul {
+          list-style-type: square;
+          margin-left: 10px;
+          text-align: justify;
+          font-family: 'Poppins', sans-serif;
+          color: #4d4d4d;
+        }
+
+        footer li a {
+          text-decoration: none;
+          color: #4d4d4d;
+        }
+
+        footer ul li:hover {
+          color: #ff4d4d;
+        }
+
+        footer i {
+          color: #4d4d4d;
+        }
+
+        footer i:hover {
+          color: #ff4d4d;
+        }
+
+        #contact {
+          list-style-type: none;
+          font-family: 'Poppins', sans-serif;
+          color: #4d4d4d;
+          text-align: justify;
+        }
+        /*Copright footer section*/
+        #footer {
+          width: 100%;
+          height: 50px;
+          background-color: #ff4d4d;
+          color: white;
+          font-family: 'Poppins', sans-serif;
+        }
+
+        #footer span {
+          float: left;
+          width: 50%;
+          margin-top: 10px;
+        }
+        #footer ul {
+          float: left;
+          width: 45%;
+          margin-left: 20px;
+        }
+        #footer ul li {
+          display: inline;
+          margin-left: 3px;
+        }
+        #footer li a {
+          font-style: normal;
+          color: white;
+          text-decoration: none;
+        }
+        /*End of Footer Styling*/
+    }
+
+
+
+    /*End of Footer Styling*/
+    </style>
+  </head>
+  <body>
+  <!--Top Section of the Page with background-color:white-->
+  <header id="TopBar" id="return-to-top">
+    <img src="images/logo/code4ct-logo.jpg" alt="" style="width: 200px; height: 80px">
+
+    	<!--Navigation Bar-->
+      <nav>
+        <br>
+        <li><a href="home.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="portfolio.html">PORTFOLIO</a></li>
+        <li><a href="course.html">COURSE</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+
+      </nav>
+      <!--End of Navigation Bar-->
+      <!--Searching Field-->
+      <div id="search-field">
+        <input id="search_box" type="search" name="search" placeholder="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </div>
+      <!--End of Searching Field-->
+
+
+  </header>
+  <!--End of Top Section of The Page with background-color:white-->
+
+  <!--CODE FOR CAPE TOWN Section-->
+      <!--SlideShow-->
+      <div class="container">
+        <div id="previous" class="arrow">PREV</div>
+          <div id="slider">
+            <!--Image One SlideShow-->
+            <div class="slide slide1">
+              <div class="slide_content">
+
+                  <span id="wrapper">
+                    <br>
+                    <h1>CODE FOR CAPE TOWN</h1>
+                      <p>We want to see young women empowered to leverage technology for social      innovation,<br> so that there is greater diversity in the African tech industry. We want high school girls to have<br> an enabling environment to imagine and create new technology that is relevant
+                      to a South African context.</p>
+                    <button id="read-more-button"><a href="about.html">READ MORE</a></button>
+                    <button id="donation-button">DONATE NOW</button>
+                  </span>
+              </div>
+            </div>
+
+            <!--Image Two SlideShow-->
+            <div class="slide slide2">
+              <div class="slide_content">
+                <span id="wrapper">
+                  <br>
+                  <h1>CODE FOR CAPE TOWN</h1>
+                    <p>We want to see young women empowered to leverage technology for social      innovation,<br> so that there is greater diversity in the African tech industry. We want high school girls to have<br> an enabling environment to imagine and create new technology that is relevant
+                    to a South African context.</p>
+                  <button id="read-more-button"><a href="about.html">READ MORE</a></button>
+                  <button id="donation-button">DONATE NOW</button>
+                </span>
+              </div>
+            </div>
+
+            <!--Image Three SlideShow-->
+            <div class="slide slide3">
+              <div class="slide_content">
+                <span id="wrapper">
+                  <br>
+                  <h1>CODE FOR CAPE TOWN</h1>
+                    <p>We want to see young women empowered to leverage technology for social     innovation,<br> so that there is greater diversity in the African tech industry. We want high school girls to have<br> an enabling environment to imagine and create new technology that is relevant
+                    to a South African context.</p>
+                  <button id="read-more-button"><a href="#about.html">READ MORE</a></button>
+                  <button id="donation-button">DONATE NOW</button>
+                </span>
+              </div>
+            </div>
+
+          </div>
+        <div id="next" class="arrow">NEXT</div>
+        <script src="js/slideshow.js"></script>
+      </div>
+  <!--End of CODE FOR CAPE TOWN Section-->
+  <section>
+    <!--About Code4CapeTown-->
+    <div id="About_Caption">
+        <h2>Who We Are</h2>
+        <hr/><br>
+        <p style="font-weight: bold"><em>Code for Cape Town (Code4CT) is a programme that introduces young girls to basic web building skills and exposes them to opportunities in the Information and Communication Technologies (ICT) sector.</em></p>
+
+        <p>Participants are trained in web development, design principles, as well as courses in professional development. Code4CT aims to inspire a generation of young girls who are well-prepared with a toolkit of technical and soft skills in order to achieve high impact in the workplace.</p>
+
+        <p>These are skills that everyone should have. Even if you have no intention of becoming a professional coder, you will benefit from knowing how to think in this way in this increasingly computerized economy. A growing number of permanent job positions that use information technology to deliver a product or a service are becoming available in the local economy.</p>
+
+        <p> It is estimated that nearly 75000 such jobs will come online in South Africa within the next five years.  These digital jobs will mostly be driven by the ICT, Business Process Outsourcing (BPO), and the financial services industries.  These are the fastest growing sectors in our economy.  They are also the sectors that have the highest demand for entry-level digital skills.</p>
+
+        <button>Read More</button>
+        <br><br>
+    </div>
+
+    <!--Team Images-->
+    <div id="About_Images">
+        <!--Andrea's Image-->
+        <div>
+          <img src="images/home/Who_Are_We_IMG1.jpg"alt="KIDS" style="width:250px;height:220px">
+        </div>
+
+        <!--Who_Are_We_IMG1 Image-->
+        <div>
+          <img src="images/home/Who_Are_We_IMG2.jpg" alt="" style="width:250px; height:220px">
+        </div>
+
+        <!--Who_Are_We_IMG2 Image-->
+        <div>
+          <img src="images/home/Who_Are_We_IMG3.jpg" alt="" style="width:250px; height:220px">
+        </div>
+
+        <!--Who_Are_We_IMG3 Image-->
+        <div>
+          <img src="images/home/Who_Are_We_IMG4.jpg" alt="" style="width:250px; height:220px">
+        </div>
+    </div>
+  </section>
+
+  <div id="About_Course">
+    <div>
+      <img src="images/home/icons/computer.png" alt="monitor">
+      <h2>Coding</h2>
+        <p>Learn how to build your own websites using HTML, CSS, JavaScript & JQuery. Go on to explore exciting modules from game development to user experience design.</p>
+    </div>
+
+    <div>
+      <img src="images/home/icons/multimedia.png" alt="speaker">
+      <h2>Communication</h2>
+        <p>Learn how to pitch ideas, represent yourself online, communicate professionally and work with online collaboration tools.</p>
+    </div>
+
+    <div>
+      <img src="images/home/icons/wrench.png" alt="speaker">
+      <h2>Problem Solving</h2>
+        <p>Apply your coding skills to issues you are interested in. You will learn how to tackle complex problems using the design thinking process.</p>
+    </div>
+  </div>
+
+  <!--Our Portfolio about Code4CapeTown-->
+  <div id="Portfolio_Container">
+    <h2>Our Awesome Portfolio</h2>
+      <hr/>
+      <p>Code for Cape Town strives to see young women empowered to leverage technology for social innovation, so that there is greater diversity in the African tech industry.  Code for Cape Town equips high potential female learners with the coding, problem solving and life skills that will allow them to leverage technology to contribute meaningfully to South Africa’s innovation system.</p>
+
+      <div id="grid">
+        <div ><img src="images/home/portfolio_image1.jpg" alt="" style="width: 400px; height: 250px"></div>
+        <div ><img src="images/home/portfolio_image2.jpg" alt="" style="width: 400px; height: 250px"></div>
+        <div id="grid_container"><img src="images/home/portfolio_image3.jpg" alt="" style="width: 500px; height: 500px"></div>
+        <div ><img src="images/home/portfolio_image4.jpg" alt="" style="width: 400px; height: 220px"></div>
+        <div ><img src="images/home/portfolio_image5.jpg" alt="" style="width: 400px; height: 220px"></div>
+      </div>
+      <br>
+
+    <!--Code4CapeTown Team-->
+    <h2>Meet Our Team</h2>
+      <hr/>
+      <p></p>
+        <!--Team Images with Details about Each Team Member-->
+        <div id="team_container">
+          <!--About Andrea-->
+          <div><img src="images/home/team/Andrea.jpg" alt="" style="width: 300px; height: 430px">
+            <h4>Andrea Petersen - Operations Lead</h4>
+            <p>Andrea thrives on seeing key players in the Code4CT ecosystem discover how they can make the greatest impact. When she is not co-ordinating the Code4CT family she can be found enjoying the diverse cuisine and great outdoors that Cape Town has to offer.</p>
+
+          </div>
+          <!--End of Andrea Closing-->
+
+          <!--About Emma-->
+          <div><img src="images/home/team/Emma.jpg" alt="" style="width: 300px; height: 430px">
+            <h4>Emma Dicks - Founder and Director</h4>
+            <p>Emma is passionate about providing high quality education that enables young people to bring innovative ideas to life and play an active role in South Africa’s economy. Aside from her work at Code4CT, Emma advocates for tech education through acting as an Ambassador for Africa Code Week and coordinating the #eSkills4Girls network in Africa. She has been awarded the Queen’s Young Leaders Award for her work towards social justice which she received in June 2015 from her Majesty the Queen at Buckingham Palace.</p>
+
+          </div>
+          <!--End of Emma Closing-->
+
+          <!--About Tegan-->
+          <div><img src="images/home/team/Tegan.jpg" alt="" style="width: 300px; height: 430px">
+            <h4>Tegan Crous - Program Lead</h4>
+            <p>Tegan heads up the high school program.She is spurred on by a heart for people and seeing them pursue their potential in a safe, fun and nurturing environment. She has experience working with youth in various formats and found herself in the tech industry quite by mistake, but with no regrets.Tegan has a long history with the organisation and she has delighted in being part of its impact and growth.</p>
+
+          </div>
+          <!--End of Tegan Closing-->
+
+          <!--About Tracy-->
+          <div>
+            <img src="images/home/team/Tracy.jpg" alt="" style="width: 300px; height: 430px">
+            <h4>Tracy-Anne Sikenjana - Leadership Program Manager</h4>
+            <p>Tracy joined the Code4CT program in 2015 and then matriculated from Rustenburg Girls’ High in 2016. She decided to intern with Code4CT to give back to an organisation that had a large impact on her personal growth and development. During her time at Code4CT she facilitated coding classes, headed up the Ambassador programme and assisted with all program operations and logistics. She believes in helping young girls realize the potential they have to become game changers in their local communities.</p>
+          </div>
+          <!--End of Tracy closing-->
+      </div>
+      <!--Closing for Team Images-->
+  </div>
+  <!--End of Portfolio-->
+
+  <!--Counting++ Statistics about Code4CapeTown-->
+  <div id="Statistics_container">
+    <div>
+      <hr/><br>
+      <span class="NumberUp" count="780">0</span>
+      <p>Number of Girls</p>
+    </div>
+
+    <div>
+      <hr/><br>
+      <span class="NumberUp" count="3120">0+</span>
+      <p>Projects Completed</p>
+    </div>
+
+    <div>
+      <hr/><br>
+      <span class="NumberUp" count="3000">0+</span>
+      <p>Cup of Coffee</p>
+    </div>
+
+    <div>
+      <hr/><br>
+      <span class="NumberUp" count="8765">0+</span>
+      <p>Hours of Coding</p>
+    </div>
+
+  </div>
+  <!--Email to Subscribe to Code4CapeTown-->
+  <div id="Email_container">
+    <h2><img src="images/logo/flight-logo.png" alt="" style="width: 20px; height: 20px;"> &nbsp;  &nbsp;SUPPORT CODE FOR CAPE TOWN</h2>
+      	<p>Individuals and companies may choose to align themselves to our work by becoming a #FriendofCode4CT.</p>
+    <form>
+      <input id='email' type="email" name="email" placeholder="enter your email">
+      <button id='validate'>Submit</button>
+      <p id="result"></p>
+      <br><br>
+    </form>
+  </div>
+
+  <div id="Logo_Carousel">
+    <div id='carousel_container'>
+      <div id='carousel_inner'>
+        <ul id='carousel_ul'>
+          <!--CSG Logo-->
+          <li><img src="images/logo/csg_logo.jpg" alt="CSG" style="width: 80%; height: 150px"></li>
+          <!--Lwandle Logo-->
+          <li><img src="images/logo/lwandlelogo..jpg" alt="" style="width: 80%; height: 150px"></li>
+          <!--Mazars Logo-->
+          <li><img src="images/logo/mazars-logo..jpg" alt="" style="width: 80%; height: 150px"></li>
+          <!--Mobenzi Logo-->
+          <li><img src="images/logo/Mobenzi_Logo..jpg" alt="" style="width: 80%; height: 150px"></li>
+          <!--Open Box Logo-->
+          <li><img src="images/logo/openboxlogo..jpg" alt="" style="width: 80%; height: 150px"></li>
+          <!--Take A Lot Logo-->
+          <li><img src="images/logo/Takealot-logo..jpg" alt="" style="width: 80%; height: 150px"></li>
+          <!--TNS Logo-->
+          <li><img src="images/logo/TNS-logo..jpg" alt="" style="width: 80%; height: 150px"></li>
+          <!--Google Logo-->
+          <li><img src="images/logo/google.jpg" alt="" style="width: 80%; height: 150px"></li>
+          <!--Where is my Trasnport Logo-->
+          <li><img src="images/logo/Where-Is-My-Transport.png" alt="" style="width: 80%; height: 150px"></li>
+          <!--Saratoga Logo-->
+          <li><img src="images/logo/Saratoga-Logo.png" alt="" style="width: 80%; height: 150px"></li>
+          <!--Amazon Logo-->
+          <li><img src="images/logo/amazon.png" alt="" style="width: 80%; height: 150px"></li>
+          <!--DG Murray Trust Logo-->
+          <li><img src="images/logo/DGMurrayTrust.png" alt="" style="width: 80%; height: 150px"></li>
+          <!--WeTech Logo-->
+          <li><img src="images/logo/WeTech.png" alt="" style="width: 80%; height: 150px"></li>
+          <!--Automattic Logo-->
+          <li><img src="images/logo/Automattic-Logo.png" alt="" style="width: 80%; height: 150px"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div>
+    <a href="#0" class="cd-top">Top</a>
+  </div>
+  <br><br>
+
+  <!--Footer with Details Code4CapeTown-->
+  <footer>
+    <div>
+      <h2>Legal</h2>
+        <p>Code for Cape Town is a project of Innovate South Africa, which is a registered non-profit (137806NPO) and a Public Beneficiary Organisation (930050338)</p>
+    </div>
+
+    <div>
+      <h2>Company</h2>
+        <ul>
+          <li><a href="about.html">About us<a/></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="http://code4ct.com/blog/">Blog</a></li>
+        </ul>
+    </div>
+    <!--Contact Details on Footer-->
+    <div id="contact">
+      <h2>Contact</h2>
+        <li><i class="fa fa-phone-square" style="font-size:24px"></i> &nbsp; &nbsp;+(27)021 685 0991</li>
+        <li><i class="fa fa-envelope-o" style="font-size:24px"></i> &nbsp; &nbsp;info@code4ct.com</li>
+        <li>&nbsp;<i class="fa fa-map-marker" style="font-size:24px"></i> &nbsp;Physical address: Innovate South Africa,<br> &nbsp; &nbsp; &nbsp; 403 Old Castle Brewery, 6 Beach Rd,<br> &nbsp; &nbsp; &nbsp; Woodstock, Cape Town, 7915 </li>
+    </div>
+  </footer>
+  <!--Copyright Footer-->
+  <div id="footer">
+    <span>Copright 2017 PRIVATE POLICY</span>
+      <ul>
+        <li>Follow us:</li>
+        <li><a href="https://www.facebook.com/code4ct/"><i class="fa fa-facebook"></i></a><li>
+        <li><a href="https://twitter.com/@code4ct"><i class="fa fa-twitter"></i></a><li>
+        <li><a href="https://www.linkedin.com/company/9414552/"><i class="fa fa-linkedin"></i></a><li>
+      </ul>
+  </div>
+  <script src="js/slideshow.js"></script>
+  <script src="js/floatCarousel.js"></script>
+  <!--JQuery for Count Up Statistics_container-->
+  <script type="text/javascript">
+  $('.NumberUp').each(function() {
+    var $this = $(this),
+    countTo = $this.attr('count');
+
+    $({ countNum: $this.text()}).animate({
+        countNum: countTo
+      },
+      {
+        duration: 8000,
+        easing:'linear',
+        step: function() {
+          $this.text(Math.floor(this.countNum));
+        },
+        complete: function() {
+          $this.text(this.countNum + "+");
+        }
+  });
+});
+
+
+// Email Validation
+function validateEmail(email) {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+
+function validate() {
+  $("#result").text("");
+  var email = $("#email").val();
+  if (validateEmail(email)) {
+    $("#result").text(email + " is valid :)");
+    $("#result").css("color", "green");
+  } else {
+    $("#result").text(email + " is not valid :(");
+    $("#result").css("color", "red");
+  }
+  return false;
+}
+
+$("#validate").bind("click", validate);
+
+//Smooth back to Top
+
+</script>
+</body>
+</html>

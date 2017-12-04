@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Course | Code4CT</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" defer=”defer”></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Poppins" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" href="images/logo/code4ct-logo.jpg" type="image/jpg">
+
+    <style>
+    body{
+      width: 100%;
+    }
+    header {
+      background-color: #999999;
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+      color: #4d4d4d;
+      padding: 50px;
+      text-align: center;
+      width: 100%;
+    }
+    /*NavBar Styling*/
+
+    nav {
+      background-color: white;
+      font-style: normal;
+      width: 100%;
+      height: 50px;
+      width: 100%;
+      margin-left: 450px;
+    }
+
+    nav li {
+        display: inline;
+        list-style-type: none;
+        text-decoration: none;
+        padding: 10px;
+        margin-left: 5px;
+
+    }
+    nav li a{
+      font-style: normal;
+      font-family: 'Lato', sans-serif;
+      font-weight: bold;
+      font-size: 14px;
+      color: #4d4d4d;
+      list-style-type: none;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+    nav li a:hover {
+      color: red;
+    }
+    nav li a:active {
+      color: red;
+    }
+
+    /*End of NavBar Styling*/
+
+    span.breadcrumb li {
+      list-style-type: none;
+      display: inline;
+      text-align: center;
+      font-style: normal;
+      font-family: 'Poppins', sans-serif;
+      display: inline;
+    }
+    span.breadcrumb li a {
+      text-decoration: none;
+      color: #4d4d4d;
+    }
+    span.breadcrumb li a:hover {
+      color: #ff4d4d;
+    }
+    /*END of Top of the Page Styling*/
+
+    /*Course Section*/
+    /*Introductory Coding Course*/
+    #intro_course {
+      width: 75%;
+      display: grid;
+      grid-template-rows: 2fr;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 5px;
+      color: black;
+
+    }
+    #intro_course div {
+
+      text-align: center;
+    }
+    #intro_course div p {
+        padding: 0 10%;
+    }
+    /*Beginner Coding Course Style*/
+    #beginner_course {
+      width: 65%;
+      display: grid;
+      grid-template-rows: 2fr;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 5px;
+      background-color: white;
+      color: black;
+    }
+    #beginner_course div {
+      text-align: center;
+    }
+    #beginner_course div p {
+      padding: 0 10%;
+    }
+
+    #intro_course  div, #beginner_course div {
+      background-color: #595959;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    h1 {
+      font-family: 'Poppins', sans-serif;
+    }
+    h2 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /*Cart Styling*/
+    #cart {
+      float: right;
+      width: 30%;
+      background-color: #ff9900;
+      color: white;
+      height: auto;
+      text-align: center;
+    }
+    #cart h3 {
+      font-family: 'Poppins', sans-serif;
+    }
+    #cart p, span {
+      font-family: 'Lato', sans-serif;
+    }
+    #cart #total-price {
+      font-weight: bolder;
+    }
+    /*End of Cart Styling*/
+
+    /*Footer Styling*/
+    #contact {
+      list-style-type: none;
+      font-family: 'Poppins', sans-serif;
+      color: #4d4d4d;
+      text-align: justify;
+    }
+    footer {
+      clear: both;
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 5px;
+      background-color: white;
+    }
+
+    footer > div {
+      background-color: white;
+      padding: 10px;
+    }
+
+    footer h2 {
+      font-family: 'Poppins', sans-serif;
+      color: #4d4d4d;
+      margin-left: 20px;
+    }
+
+    footer p {
+      margin-left: 5px;
+      text-align: justify;
+      font-family: 'Poppins', sans-serif;
+      color: #4d4d4d;
+    }
+
+    footer ul {
+      list-style-type: square;
+      margin-left: 10px;
+      text-align: justify;
+      font-family: 'Poppins', sans-serif;
+      color: #4d4d4d;
+    }
+
+    footer li a {
+      text-decoration: none;
+      color: #4d4d4d;
+    }
+
+    footer ul li:hover {
+      color: #ff4d4d;
+    }
+
+    footer i {
+      color: #4d4d4d;
+    }
+
+    footer i:hover {
+      color: #ff4d4d;
+    }
+
+    /*Copright footer section*/
+    #footer {
+      width: 100%;
+      height: 50px;
+      background-color: #ff4d4d;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    #footer span {
+      float: left;
+      width: 50%;
+      margin-top: 10px;
+    }
+    #footer ul {
+      float: left;
+      width: 45%;
+      margin-left: 20px;
+    }
+    #footer ul li {
+      display: inline;
+      margin-left: 3px;
+    }
+    #footer li a {
+      font-style: normal;
+      color: white;
+      text-decoration: none;
+    }
+    /*End of Footer Section*/
+
+    </style>
+  </head>
+  <body>
+
+      <!--NavBar-->
+      <nav>
+        <li><a href="home.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="portfolio.html">PORTFOLIO</a></li>
+        <li><a href="course.html">COURSE</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </nav>
+
+    <header>
+          <!--Heading with breadcrumbs-->
+          <h1>COURSE</h1>
+          <span class="breadcrumb">
+            <li><a href="home.html">HOME</a></li>
+            <li><i class="fa fa-long-arrow-right"></i></li>
+            <li><a href="course.html">COURSE</a></li>
+          </span>
+    </header>
+
+    <!--Cart Payment-->
+    <aside id="cart">
+      <img src="images/icons/cart.png" alt="" style="width: 20%; height: 40px">
+      <h3>CART</h3>
+        <p id="web-cart"></p>
+        <p id="music-cart"></p>
+        <p id="animation-cart"></p>
+        <p id="web_create-cart"></p>
+        <p id="music_create-cart"></p>
+        <p id="animation_create-cart"></p>
+        <p id="web_developer-cart"></p>
+        <p id="js-cart"></p>
+        <p id="front-cart"></p>
+        <p id="python-cart"></p>
+        <p id="full-stack-cart"></p>
+        <p id="deploy-cart"></p>
+        <p id="innovate-cart"></p>
+        <p id="codestorm-cart"></p>
+        <p id="total-price"></p>
+    </aside>
+
+    <!--Header 1-->
+    <h1>Introductory Coding Course</h1>
+
+    <!--Intro DIV-->
+    <div id="intro_course">
+        <!--Web Page Beginner Course-->
+        <div id="web">
+        </div>
+
+        <!--Creating of Music Course-->
+        <div id="music">
+        </div>
+
+        <!--Animation Course-->
+        <div id="animation">
+        </div>
+
+        <!--Creating of Code Page Beginner Course-->
+        <div id="web_create">
+        </div>
+
+        <!--Music Create Course-->
+        <div id="music_create">
+        </div>
+
+        <!--Animation Create Course-->
+        <div id="animation_create">
+        </div>
+
+        <!--Web Developer-->
+        <div id="web_developer">
+        </div>
+
+    </div>
+
+    <h1>Beginner Coding Course</h1>
+
+    <!--Intro to JavaScript-->
+    <div id="beginner_course">
+
+        <div id="javascript">
+        </div>
+
+        <!--Front End web Developer Course-->
+        <div id="frontEnd">
+        </div>
+
+        <!--Python Course for Beginners-->
+        <div id="python">
+        </div>
+
+      <!--Intermediate -->
+        <div id="full-stack">
+        </div>
+
+        <div id="deploy">
+        </div>
+
+        <!--Social Innovation-->
+        <div id="innovative">
+        </div>
+
+        <div id="code-storm">
+        </div>
+    </div>
+
+
+
+    <!--Footer-->
+    <footer>
+      <div>
+        <h2>Legal</h2>
+          <p>Code for Cape Town is a project of Innovate South Africa, which is a registered non-profit (137806NPO) and a Public Beneficiary Organisation (930050338)</p>
+      </div>
+
+      <div>
+        <h2>Company</h2>
+          <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+            <li><a href="http://code4ct.com/blog/">Blog</a></li>
+          </ul>
+      </div>
+      <!--Contact Details on Footer-->
+      <div id="contact">
+        <h2>Contact</h2>
+          <li><i class="fa fa-phone-square" style="font-size:24px"></i> &nbsp; &nbsp;+(27)021 685 0991</li>
+          <li><i class="fa fa-envelope-o" style="font-size:24px"></i> &nbsp; &nbsp;info@code4ct.com</li>
+          <li>&nbsp;<i class="fa fa-map-marker" style="font-size:24px"></i> &nbsp;Physical address: Innovate South Africa,<br> &nbsp; &nbsp; &nbsp; 403 Old Castle Brewery, 6 Beach Rd,<br> &nbsp; &nbsp; &nbsp; Woodstock, Cape Town, 7915 </li>
+      </div>
+    </footer>
+    <!--Copyright Footer-->
+    <div id="footer">
+      <span>Copright 2017 PRIVATE POLICY</span>
+        <ul>
+          <li>Follow us:</li>
+          <li><a href="https://www.facebook.com/code4ct/"><i class="fa fa-facebook"></i></a><li>
+          <li><a href="https://twitter.com/@code4ct"><i class="fa fa-twitter"></i></a><li>
+          <li><a href="https://www.linkedin.com/company/9414552/"><i class="fa fa-linkedin"></i></a><li>
+
+        </ul>
+  </body>
+  <script src="js/floatCarousel.js"></script>
+  <script type="text/javascript">
+
+       // Introductory Coding Courses
+      $(function(){
+        //Creating Web Pages
+        $('#web').append(
+          '<img src="images/icons/html.png" style="width: 150px; height: 100px">'+
+          '<h4>Intro of Coding &nbsp;: &nbsp; Web Pages</h4>'+
+          '<p>Description &nbsp;: &nbsp; Code a simple one-page using HTML and jQuery.</p>'+
+          '<p>Duration &nbsp;: &nbsp; 3 hours</p>'+
+          '<p>Cost &nbsp;: &nbsp; R250.00</p>'+
+          '<button id="web-button-add" value="250.00">+</button> '+' <button id="web-button-minus" value="250.00">-</button>'
+        );
+        // Creating Music
+        $('#music').append(
+          '<img src="images/icons/music.png" style="width: 150px; height: 100px">'+
+          '<h4>Intro of Coding &nbsp;: &nbsp; Music</h4>'+
+          '<p>Description &nbsp;: &nbsp; Code a song using SonicPi software on a Raspberry Pi computer.</p>'+
+          '<p>Duration &nbsp;: &nbsp; 3 hours</p>'+
+          '<p>Cost &nbsp;: &nbsp; R250.00</p>'+
+          '<button id="music-button-add" value="250.00">+</button> '+' <button id="music-button-minus" value="250.00">-</button>'
+        );
+        // Creating Animation
+        $('#animation').append(
+          '<img src="images/icons/animate.png" style="width: 150px; height: 100px">'+
+          '<h4>Intro of Coding &nbsp;: &nbsp; Animation</h4>'+
+          '<p>Description &nbsp;: &nbsp; Create a 2D animation using coding language JavaScript.</p>'+
+          '<p>Duration &nbsp;: &nbsp; 3 hours</p>'+
+          '<p>Cost &nbsp;: &nbsp; R250.00</p>'+
+          '<button id="animation-button-add" value="250.00">+</button> '+' <button id="animation-button-minus" value="250.00">-</button>'
+        );
+
+        // Creating of Web-Create COURSE
+        $('#web_create').append(
+          '<img src="images/icons/web-create.png" style="width: 150px; height: 100px">'+
+          '<h4>Create with Codes &nbsp;: &nbsp; Web Pages</h4>'+
+          '<p>Description &nbsp;: &nbsp; Learn how the internet works and code a simple one-page website using HTML, CSS and JQuery.</p>'+
+          '<p>Duration &nbsp;: &nbsp; 3 days</p>'+
+          '<p>Cost &nbsp;: &nbsp; R960.00</p>'+
+          '<button id="web_create-button-add" value="960.00">+</button> '+' <button id="web_create-button-minus" value="960.00">-</button>'
+        );
+
+        // Creating of Music-Create COURSE
+        $('#music_create').append(
+          '<img src="images/icons/music-create.png" style="width: 150px; height: 100px">'+
+          '<h4>Create with Codes &nbsp;: &nbsp; Music</h4>'+
+          '<p>Description &nbsp;: &nbsp; Learn computer science principles by coding music with a Raspberry Pi computer.</p>'+
+          '<p>Duration &nbsp;: &nbsp; 3 days</p>'+
+          '<p>Cost &nbsp;: &nbsp; R960.00</p>'+
+          '<button id="music_create-button-add" value="960.00">+</button> '+' <button id="music_create-button-minus" value="960.00">-</button>'
+        );
+
+        // Creating of Animation-Create COURSE
+        $('#animation_create').append(
+          '<img src="images/icons/animation-create.jpg" style="width: 150px; height: 100px">'+
+          '<h4>Create with Codes &nbsp;: &nbsp; Animation</h4>'+
+          '<p>Description &nbsp;: &nbsp; Learn computer science principles by coding animations using JavaScript.</p>'+
+          '<p>Duration &nbsp;: &nbsp; 3 days</p>'+
+          '<p>Cost &nbsp;: &nbsp; R960.00</p>'+
+          '<button id="animation_create-button-add" value="960.00">+</button> '+' <button id="animation_create-button-minus" value="960.00">-</button>'
+        );
+
+        // Web developer starter course
+        $('#web_developer').append(
+          '<img src="images/icons/web-developer.png" style="width: 150px; height: 100px">'+
+          '<h4>Getting started as a developer</h4>'+
+          '<p>Description &nbsp;: &nbsp; Learn how to set up a development environment and practical skills to start coding.</p>'+
+          '<p>Duration &nbsp;: &nbsp; 3 hours</p>'+
+          '<p>Cost &nbsp;: &nbsp; R250.00</p>'+
+          '<button id="developer-button-add" value="250.00">+</button> '+' <button id="developer-button-minus" value="250.00">-</button>'
+        );
+    });
+
+    //Beginner Coding Course
+    $(function(){
+      // Beginner JavaScript
+      $('#javascript').append(
+        '<img src="images/icons/javascript.png" style="width: 150px; height: 100px">'+
+        '<h4>Beginner JavaScript</h4>'+
+        '<p>Description &nbsp;: &nbsp; Develop a basic proficiency in programming structures and methods in JavaScript so that you are able to create an interactive web application.</p>'+
+        '<p>Duration &nbsp;: &nbsp; 6 days</p>'+
+        '<p>Cost &nbsp;: &nbsp; R1800.00</p>'+
+        '<button id="js-button-add" value="1800.00">+</button> '+' <button id="js-button-minus" value="1800.00">-</button>'
+      );
+      // Beginner Front-End Web Developer
+      $('#frontEnd').append(
+        '<img src="images/icons/front-end.png" style="width: 150px; height: 100px">'+
+        '<h4>Beginner Front End Web Development</h4>'+
+        '<p>Description &nbsp;: &nbsp; Develop a good proficiency in CSS and an understanding of web design principles so that you are able to create visually pleasing web pages.</p>'+
+        '<p>Duration &nbsp;: &nbsp; 6 days</p>'+
+        '<p>Cost &nbsp;: &nbsp; R1800.00</p>'+
+        '<button id="front-button-add" value="1800.00">+</button> '+' <button id="front-button-minus" value="1800.00">-</button>'
+      );
+      // Python Course
+      $('#python').append(
+        '<img src="images/icons/python.png" style="width: 150px; height: 100px">'+
+        '<h4>Beginner Python</h4>'+
+        '<p>Description &nbsp;: &nbsp; Develop a basic proficiency in programming principles and methods in Python.</p>'+
+        '<p>Duration &nbsp;: &nbsp; 6 days</p>'+
+        '<p>Cost &nbsp;: &nbsp; R1800.00</p>'+
+        '<button id="python-button-add" value="1800.00">+</button> '+' <button id="python-button-minus" value="1800.00">-</button>'
+      );
+
+      //full stack JavaScript Course
+      $('#full-stack').append(
+        '<img src="images/icons/full-stack.jpg" style="width: 150px; height: 100px">'+
+        '<h4>Full-Stack JavaScript</h4>'+
+        '<p>Description &nbsp;: &nbsp; Develop an understanding of the front and backend development environment and basic proficiency in server side JavaScript and object-oriented programming. By the end of the course you will be able to architect an application, control flow in an application and persist and retrieve data in a database.</p>'+
+        '<p>Duration &nbsp;: &nbsp; 6 days</p>'+
+        '<p>Cost &nbsp;: &nbsp; R1800.00</p>'+
+        '<button id="full-stack-button-add" value="1800.00">+</button> '+' <button id="full-stack-button-minus" value="1800.00">-</button>'
+      );
+
+      //Website Deployment
+      $('#deploy').append(
+        '<img src="images/icons/deploy.png" style="width: 150px; height: 100px">'+
+        '<h4>Website Deployment</h4>'+
+        '<p>Description &nbsp;: &nbsp; Learn how to manage and deploy code to a server  environment so that you can host your own web pages.</p>'+
+        '<p>Duration &nbsp;: &nbsp; 4 days</p>'+
+        '<p>Cost &nbsp;: &nbsp; R1200.00</p>'+
+        '<button id="deploy-button-add" value="1200.00">+</button> '+' <button id="deploy-button-minus" value="1200.00">-</button>'
+      );
+
+      //Innovative Challenge
+      $('#innovative').append(
+        '<img src="images/icons/innovate.png" style="width: 150px; height: 100px">'+
+        '<h4>Innovation Challenge</h4>'+
+        '<p>Description &nbsp;: &nbsp; Work in groups to design an innovative solution to a social issue by using the design thinking process.</p>'+
+        '<p>Duration &nbsp;: &nbsp; 3 days</p>'+
+        '<p>Cost &nbsp;: &nbsp; R750.00</p>'+
+        '<button id="innovate-button-add" value="750.00">+</button> '+' <button id="innovate-button-minus" value="750.00">-</button>'
+      );
+
+      //CodeStorm
+      $('#code-storm').append(
+        '<img src="images/icons/codestorm.jpg" style="width: 150px; height: 100px">'+
+        '<h4>CodeStorm</h4>'+
+        '<p>Description &nbsp;: &nbsp; Work in groups to create and present a code project that addresses a particular issue.</p>'+
+        '<p>Duration &nbsp;: &nbsp; 5 days</p>'+
+        '<p>Cost &nbsp;: &nbsp; R1500.00</p>'+
+        '<button id="codestorm-button-add" value="1500.00">+</button> '+' <button id="codestorm-button-minus" value="1500.00">-</button>'
+      );
+
+    });
+
+    // Online Cart
+    // Introductory Coding Course
+    $(function(){
+      // Web Cart
+      $('#web-button-add').click(function(){
+        $('#web-cart').append('<span>Intro of Coding : Web Pages - R250.00</span>');
+        });
+
+      // Music Cart
+      $('#music-button-add').click(function(){
+        $('#music-cart').append('<span>Intro of Coding : Music - R250.00</span>');
+        });
+
+      // Animation Cart
+      $('#animation-button-add').click(function(){
+        $('#animation-cart').append('<span>Intro of Coding : Animation - R250.00</span>');
+      });
+
+      // web_create Cart
+      $('#web_create-button-add').click(function(){
+        $('#web_create-cart').append('<span>Create with Codes : Web Pages - R960.00</span>');
+      });
+
+      // music_create Cart
+      $('#music_create-button-add').click(function(){
+        $('#music_create-cart').append('<span>Create with Codes : Music - R960.00</span>');
+      });
+
+      //animation_create Cart
+      $('#animation_create-button-add').click(function(){
+        $('#animation_create-cart').append('<span>Create with Codes : Animation - R960.00</span>');
+      });
+
+      // Web_developer Cart
+      $('#developer-button-add').click(function(){
+        $('#web_developer-cart').append('<span>Getting started as a developer - R250.00</span>');
+      });
+    });
+
+    // Beginner Coding COURSE
+    $(function(){
+      $('#js-button-add').click(function(){
+        $('#js-cart').append('<span>1800.00</span>');
+      });
+
+      // Front-End Web Developer Cart
+      $('#front-button-add').click(function(){
+        $('#front-cart').append('<span>1800.00</span>');
+      });
+
+      // Python Cart
+      $('#python-button-add').click(function(){
+        $('#python-cart').append('<span>1800.00</span>');
+      });
+
+      // Full Stack JavaScript
+      $('#full-stack-button-add').click(function(){
+        $('#full-stack-cart').append('<span>1800.00</span>');
+      });
+
+      // Website Deployment
+      $('#deploy-button-add').click(function(){
+        $('#deploy-cart').append('<span>1200.00</span>')
+      });
+
+      //Innovative Challenge
+      $('#innovative-button-add').click(function(){
+        $('#innovate-cart').append();
+      });
+
+      //codestorm
+      $('#codestorm-button-add').click(function(){
+        $('#code-storm').append();
+      });
+    });
+
+    // Removing Courses
+    $(function(){
+      //Web Page Cart
+      $('#web-button-minus').click(function(){
+        $('#web-cart').remove();
+      });
+      //Music Cart
+      $('#music-button-minus').click(function(){
+        $('#music-cart').remove();
+      });
+      //Animation Cart
+      $('#animation-button-minus').click(function(){
+        $('#animation-cart').remove();
+      });
+      // web_create Cart
+      $('#web_create-button-minus').click(function(){
+        $('#web_create-cart').remove();
+      });
+
+      // music_create Cart
+      $('#music_create-button-minus').click(function(){
+        $('#music_create-cart').remove();
+      });
+
+      //animation_create Cart
+      $('#animation_create-button-minus').click(function(){
+        $('#animation_create-cart').remove();
+      });
+
+      // Web_developer Cart
+      $('#developer-button-minus').click(function(){
+        $('#web_developer-cart').remove();
+      });
+
+      // Full Stack JavaScript
+      $('#full-stack-button-minus').click(function(){
+        $('#full-stack-cart').remove();
+      });
+
+      // Website Deployment
+      $('#deploy-button-minus').click(function(){
+        $('#deploy-cart').remove();
+      });
+
+      //Innovative Challenge
+      $('#innovative-button-minus').click(function(){
+        $('#innovate-cart').remove();
+      });
+
+      //codestorm
+      $('#codestorm-button-minus').click(function(){
+        $('#codestorm-cart').remove();
+      });
+    });
+
+      // Beginner Coding Course
+    $(function(){
+      //JavaScript Cart
+      $('#js-button-minus').click(function(){
+        $('#js-cart').remove();
+      });
+      //Front-End Web Developer Cart
+      $('#front-button-minus').click(function(){
+        $('#front-cart').remove();
+      });
+      //Python Cart
+      $('#python-button-minus').click(function(){
+        $('#python-cart').remove();
+      });
+    });
+
+    // Total Pricing Adding of values total price
+    var total = 0;
+    $(function(){
+       $('#web-button-add, #music-button-add, #animation-button-add, #js-button-add, #front-button-add, #python-button-add, #web_create-button-add, #music_create-button-add, #animation_create-button-add, #developer-button-add, #full-stack-button-add, #deploy-button-add, #innovative-button-add, #codestorm-button-add').click(function(){
+         total = Number(total) + Number($(this).val());
+         $('#total-price').text("Total: "+total);
+       });
+
+       $('#total-price').text("Total: "+total);
+     });
+
+    // Subracting of values total price
+    $(function(){
+      $('#web-button-minus, #music-button-minus, #animation-button-minus, #js-button-minus,   #front-button-minus, #python-button-minus, #web_create-button-minus, #music_create-button-minus,  #animation_create-button-minus, #developer-button-minus, #full-stack-button-minus,  #deploy-button-minus, #innovative-button-minus, #codestorm-button-minus').click(function() {
+        total = Number(total) - Number($(this).val());
+        $('#total-price').text("Total: "+total);
+      });
+    });
+
+  </script>
+</html>
